@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		851EB554273EE5820016F8CF /* GetKeyPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851EB553273EE5820016F8CF /* GetKeyPopoverViewController.swift */; };
+		851EB556273F05080016F8CF /* KeyCodeToKeyTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851EB555273F05080016F8CF /* KeyCodeToKeyTransformer.swift */; };
+		855698AE2737F80E0006B556 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855698AD2737F80E0006B556 /* AppDelegate.swift */; };
+		855698B02737F80E0006B556 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855698AF2737F80E0006B556 /* ViewController.swift */; };
+		855698B22737F80F0006B556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 855698B12737F80F0006B556 /* Assets.xcassets */; };
+		855698B52737F80F0006B556 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 855698B32737F80F0006B556 /* Main.storyboard */; };
+		8573C4312745AD97000248F8 /* MenuBarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8573C4302745AD97000248F8 /* MenuBarIcon.png */; };
+		85AFCCA1274305DA00F52832 /* OnlyIntegerValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFCCA0274305DA00F52832 /* OnlyIntegerValueFormatter.swift */; };
+		85FB18152741B29700597FE9 /* ModeIndexToBoolTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FB18142741B29700597FE9 /* ModeIndexToBoolTransformer.swift */; };
+		A59613E893C5B8E14A8C9C5B /* Pods_MaClicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6709A88BB4B4C5D9D3AA2D /* Pods_MaClicker.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A6709A88BB4B4C5D9D3AA2D /* Pods_MaClicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaClicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D49550DF5715653F45E939C /* Pods-MaClicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaClicker.release.xcconfig"; path = "Target Support Files/Pods-MaClicker/Pods-MaClicker.release.xcconfig"; sourceTree = "<group>"; };
+		606B1C52629B66BCB85C8925 /* Pods-MaClicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaClicker.debug.xcconfig"; path = "Target Support Files/Pods-MaClicker/Pods-MaClicker.debug.xcconfig"; sourceTree = "<group>"; };
+		851EB553273EE5820016F8CF /* GetKeyPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetKeyPopoverViewController.swift; sourceTree = "<group>"; };
+		851EB555273F05080016F8CF /* KeyCodeToKeyTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCodeToKeyTransformer.swift; sourceTree = "<group>"; };
+		855698AA2737F80E0006B556 /* MaClicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaClicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		855698AD2737F80E0006B556 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		855698AF2737F80E0006B556 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		855698B12737F80F0006B556 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		855698B62737F80F0006B556 /* MaClicker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MaClicker.entitlements; sourceTree = "<group>"; };
+		855698BC273802C10006B556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8573C41627458189000248F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8573C418274581E9000248F8 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = de; path = de.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8573C4302745AD97000248F8 /* MenuBarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuBarIcon.png; sourceTree = "<group>"; };
+		85AFCCA0274305DA00F52832 /* OnlyIntegerValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyIntegerValueFormatter.swift; sourceTree = "<group>"; };
+		85FB18142741B29700597FE9 /* ModeIndexToBoolTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeIndexToBoolTransformer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		855698A72737F80E0006B556 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A59613E893C5B8E14A8C9C5B /* Pods_MaClicker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C506373236CD06D60FBA35D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				606B1C52629B66BCB85C8925 /* Pods-MaClicker.debug.xcconfig */,
+				1D49550DF5715653F45E939C /* Pods-MaClicker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		855698A12737F80E0006B556 = {
+			isa = PBXGroup;
+			children = (
+				855698AC2737F80E0006B556 /* MaClicker */,
+				855698AB2737F80E0006B556 /* Products */,
+				2C506373236CD06D60FBA35D /* Pods */,
+				9401783A6228BD455A4878DE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		855698AB2737F80E0006B556 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				855698AA2737F80E0006B556 /* MaClicker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		855698AC2737F80E0006B556 /* MaClicker */ = {
+			isa = PBXGroup;
+			children = (
+				8573C41B27459FC7000248F8 /* Resources */,
+				855698BC273802C10006B556 /* Info.plist */,
+				855698AD2737F80E0006B556 /* AppDelegate.swift */,
+				855698AF2737F80E0006B556 /* ViewController.swift */,
+				85AFCCA0274305DA00F52832 /* OnlyIntegerValueFormatter.swift */,
+				85FB18142741B29700597FE9 /* ModeIndexToBoolTransformer.swift */,
+				851EB555273F05080016F8CF /* KeyCodeToKeyTransformer.swift */,
+				855698B12737F80F0006B556 /* Assets.xcassets */,
+				855698B32737F80F0006B556 /* Main.storyboard */,
+				851EB553273EE5820016F8CF /* GetKeyPopoverViewController.swift */,
+				855698B62737F80F0006B556 /* MaClicker.entitlements */,
+			);
+			path = MaClicker;
+			sourceTree = "<group>";
+		};
+		8573C41B27459FC7000248F8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8573C4302745AD97000248F8 /* MenuBarIcon.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9401783A6228BD455A4878DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A6709A88BB4B4C5D9D3AA2D /* Pods_MaClicker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		855698A92737F80E0006B556 /* MaClicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 855698B92737F80F0006B556 /* Build configuration list for PBXNativeTarget "MaClicker" */;
+			buildPhases = (
+				126B7087C237486ACBC91300 /* [CP] Check Pods Manifest.lock */,
+				855698A62737F80E0006B556 /* Sources */,
+				855698A72737F80E0006B556 /* Frameworks */,
+				855698A82737F80E0006B556 /* Resources */,
+				094C936FA4712A9C35CC612E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MaClicker;
+			productName = MaClicker;
+			productReference = 855698AA2737F80E0006B556 /* MaClicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		855698A22737F80E0006B556 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					855698A92737F80E0006B556 = {
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
+					};
+				};
+			};
+			buildConfigurationList = 855698A52737F80E0006B556 /* Build configuration list for PBXProject "MaClicker" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				de,
+			);
+			mainGroup = 855698A12737F80E0006B556;
+			productRefGroup = 855698AB2737F80E0006B556 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				855698A92737F80E0006B556 /* MaClicker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		855698A82737F80E0006B556 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8573C4312745AD97000248F8 /* MenuBarIcon.png in Resources */,
+				855698B22737F80F0006B556 /* Assets.xcassets in Resources */,
+				855698B52737F80F0006B556 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		094C936FA4712A9C35CC612E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MaClicker/Pods-MaClicker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MaClicker/Pods-MaClicker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MaClicker/Pods-MaClicker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		126B7087C237486ACBC91300 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MaClicker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		855698A62737F80E0006B556 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				851EB554273EE5820016F8CF /* GetKeyPopoverViewController.swift in Sources */,
+				85FB18152741B29700597FE9 /* ModeIndexToBoolTransformer.swift in Sources */,
+				855698B02737F80E0006B556 /* ViewController.swift in Sources */,
+				85AFCCA1274305DA00F52832 /* OnlyIntegerValueFormatter.swift in Sources */,
+				855698AE2737F80E0006B556 /* AppDelegate.swift in Sources */,
+				851EB556273F05080016F8CF /* KeyCodeToKeyTransformer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		855698B32737F80F0006B556 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8573C41627458189000248F8 /* en */,
+				8573C418274581E9000248F8 /* de */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		855698B72737F80F0006B556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		855698B82737F80F0006B556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		855698BA2737F80F0006B556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 606B1C52629B66BCB85C8925 /* Pods-MaClicker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MaClicker/MaClicker.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S5XDVPQ9J6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MaClicker/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.worldofbasti.maclicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		855698BB2737F80F0006B556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D49550DF5715653F45E939C /* Pods-MaClicker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MaClicker/MaClicker.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S5XDVPQ9J6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MaClicker/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.worldofbasti.maclicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		855698A52737F80E0006B556 /* Build configuration list for PBXProject "MaClicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				855698B72737F80F0006B556 /* Debug */,
+				855698B82737F80F0006B556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		855698B92737F80F0006B556 /* Build configuration list for PBXNativeTarget "MaClicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				855698BA2737F80F0006B556 /* Debug */,
+				855698BB2737F80F0006B556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 855698A22737F80E0006B556 /* Project object */;
+}
