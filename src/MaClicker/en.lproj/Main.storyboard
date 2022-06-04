@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19455"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -323,15 +323,15 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9j5-oa-LTH">
-                                <rect key="frame" x="18" y="115" width="93" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Mouse Button:" id="2wl-1b-ZFe">
+                                <rect key="frame" x="18" y="115" width="92" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Mouse button:" id="2wl-1b-ZFe">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ham-rN-COt">
-                                <rect key="frame" x="156" y="109" width="174" height="25"/>
+                                <rect key="frame" x="155" y="109" width="175" height="25"/>
                                 <popUpButtonCell key="cell" type="push" title="Left mouse button" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="tvN-uX-mPs" id="hDc-rk-fWL">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -469,6 +469,16 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bje-E0-eWa">
+                                <rect key="frame" x="233" y="13" width="45" height="32"/>
+                                <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSRefreshFreestandingTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Knj-HZ-t3f">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="updateButtonClicked:" target="XfG-lQ-9wD" id="bb5-Tg-kmo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="hUF-hi-xJW" secondAttribute="trailing" constant="20" id="3jN-FQ-w92"/>
@@ -479,15 +489,16 @@
                             <constraint firstItem="Aqe-jd-aN4" firstAttribute="top" secondItem="JnW-Dg-bBy" secondAttribute="bottom" constant="6" id="8pX-f5-o0B"/>
                             <constraint firstItem="De7-JV-Dde" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="22" id="BA3-6K-sYU"/>
                             <constraint firstAttribute="trailing" secondItem="rjL-fk-42N" secondAttribute="trailing" constant="120" id="CWF-T5-VV0"/>
-                            <constraint firstItem="yF2-LK-Bwj" firstAttribute="leading" secondItem="DNQ-Va-jBj" secondAttribute="trailing" constant="161" id="ElP-cJ-7zb"/>
                             <constraint firstAttribute="bottom" secondItem="yF2-LK-Bwj" secondAttribute="bottom" constant="20" id="GXz-ob-JWm"/>
                             <constraint firstAttribute="trailing" secondItem="Ham-rN-COt" secondAttribute="trailing" constant="20" id="HI5-ua-gwn"/>
+                            <constraint firstItem="Bje-E0-eWa" firstAttribute="leading" secondItem="DNQ-Va-jBj" secondAttribute="trailing" constant="121" id="IkX-hD-aXH"/>
                             <constraint firstItem="hUF-hi-xJW" firstAttribute="leading" secondItem="mK0-F2-3ay" secondAttribute="trailing" constant="50" id="JWA-FQ-WKM"/>
                             <constraint firstItem="Aqe-jd-aN4" firstAttribute="leading" secondItem="PQq-Mh-Poy" secondAttribute="trailing" constant="5" id="Koc-7W-jGI"/>
                             <constraint firstItem="PQq-Mh-Poy" firstAttribute="top" secondItem="3Wg-Ut-OfI" secondAttribute="bottom" constant="5" id="NJi-W0-GCd"/>
                             <constraint firstItem="3Wg-Ut-OfI" firstAttribute="leading" secondItem="ttK-r0-sQh" secondAttribute="trailing" constant="50" id="NRa-qJ-ogc"/>
                             <constraint firstAttribute="trailing" secondItem="JnW-Dg-bBy" secondAttribute="trailing" constant="20" symbolic="YES" id="Pec-VD-TUB"/>
                             <constraint firstItem="DNQ-Va-jBj" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="Pz2-e9-41o"/>
+                            <constraint firstItem="yF2-LK-Bwj" firstAttribute="leading" secondItem="Bje-E0-eWa" secondAttribute="trailing" constant="9" id="Qhb-yw-714"/>
                             <constraint firstItem="Ham-rN-COt" firstAttribute="top" secondItem="hUF-hi-xJW" secondAttribute="bottom" constant="7" id="QrZ-Mo-gnw"/>
                             <constraint firstItem="mK0-F2-3ay" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="72" id="S2J-ZL-MgQ"/>
                             <constraint firstItem="Ham-rN-COt" firstAttribute="leading" secondItem="9j5-oa-LTH" secondAttribute="trailing" constant="50" id="UQs-p5-xOX"/>
@@ -499,6 +510,7 @@
                             <constraint firstItem="9j5-oa-LTH" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="Ych-lz-7FS"/>
                             <constraint firstItem="JnW-Dg-bBy" firstAttribute="leading" secondItem="3Wg-Ut-OfI" secondAttribute="trailing" constant="5" id="bGV-IF-37i"/>
                             <constraint firstItem="VUm-TD-SSW" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="bmq-qv-a5h"/>
+                            <constraint firstAttribute="bottom" secondItem="Bje-E0-eWa" secondAttribute="bottom" constant="20" symbolic="YES" id="g0t-sI-AeM"/>
                             <constraint firstItem="hZZ-OL-P6s" firstAttribute="top" secondItem="Ham-rN-COt" secondAttribute="bottom" constant="36" id="ghN-j5-5yY"/>
                             <constraint firstItem="z9d-0c-PLF" firstAttribute="top" secondItem="ttK-r0-sQh" secondAttribute="bottom" constant="10" id="hnb-Tz-4cI"/>
                             <constraint firstItem="hUF-hi-xJW" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="70" id="hoD-Qd-2zg"/>
@@ -555,4 +567,7 @@ Press ESC to cancel.</string>
             <point key="canvasLocation" x="352" y="207"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSRefreshFreestandingTemplate" width="15" height="15"/>
+    </resources>
 </document>

@@ -7,5 +7,6 @@ target 'MaClicker' do
 
   # Pods for MaClicker
   pod 'Sauce'
+  pod 'Sparkle'
 
 end

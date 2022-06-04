@@ -4,5 +4,13 @@
 <dict>
 	<key>LSUIElement</key>
 	<true/>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
+	<key>SUFeedURL</key>
+	<string>https://bastian-aunkofer.com/maclicker-updater/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>FtmKOHFebOh+4/hlgsOGPHrDWpyUn/mK4FF895IYJKA=</string>
+	<key>SUScheduledCheckInterval</key>
+	<integer>3600</integer>
 </dict>
 </plist>

@@ -15,7 +15,7 @@ System Preferences -> Security & Privacy -> Privacy -> Accessibility
 
 ### Select mode
 Currently, you can choose between two modes:
-- Klick <br>
+- Click <br>
 The click mode enables the auto clicker with the specified clicks per second on the selected mouse button.
 - Hold <br>
 The hold mode simply holds the selected mouse button.
@@ -43,7 +43,8 @@ If you want to build MaClicker from source, follow these steps:
 - Build the project
 
 ## Acknowledgements
-Thanks to [the Sauce project](https://github.com/Clipy/Sauce), it helps me [translating a keyCode to the actual key name](https://github.com/WorldOfBasti/MaClicker/blob/master/src/MaClicker/KeyCodeToKeyTransformer.swift).
+- The [Sauce project](https://github.com/Clipy/Sauce), it helps me [translating a keyCode to the actual key name](https://github.com/WorldOfBasti/MaClicker/blob/master/src/MaClicker/KeyCodeToKeyTransformer.swift).
+- The [Sparkle project](https://sparkle-project.org), for the update process
 
 ## Want to support this project?
 The best way to support this project is to create issues and sending pull requests. Alternatively, you can translate the program to [other languages](https://github.com/WorldOfBasti/MaClicker/blob/master/src/MaClicker/en.lproj/Main.storyboard).

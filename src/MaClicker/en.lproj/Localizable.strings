@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  MaClicker
+
+  Created by Bastian Aunkofer on 04.06.22.
+  Github: https://github.com/WorldOfBasti
+  
+*/
+
+// Accessibility alert
+"accessibility_alert_message" = "Permission for accessibility needed";
+"accessibility_alert_informative_text" = "MaClicker needs the permission for accessibility to work";
+"accessibility_alert_ok" = "Ok";
+"accessibility_alert_open_settings" = "Open settings";

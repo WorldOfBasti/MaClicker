@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19455"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -452,7 +452,7 @@
                                 </connections>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yF2-LK-Bwj">
-                                <rect key="frame" x="273" y="13" width="107" height="32"/>
+                                <rect key="frame" x="292" y="13" width="88" height="32"/>
                                 <buttonCell key="cell" type="push" title="Beenden" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dQ2-Uy-QeZ">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -469,6 +469,16 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FBz-7g-INF">
+                                <rect key="frame" x="254" y="13" width="45" height="32"/>
+                                <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSRefreshFreestandingTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dYb-EZ-zsh">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="updateButtonClicked:" target="XfG-lQ-9wD" id="57O-5f-v61"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="hUF-hi-xJW" secondAttribute="trailing" constant="20" id="3jN-FQ-w92"/>
@@ -479,7 +489,6 @@
                             <constraint firstItem="Aqe-jd-aN4" firstAttribute="top" secondItem="JnW-Dg-bBy" secondAttribute="bottom" constant="6" id="8pX-f5-o0B"/>
                             <constraint firstItem="De7-JV-Dde" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="22" id="BA3-6K-sYU"/>
                             <constraint firstAttribute="trailing" secondItem="rjL-fk-42N" secondAttribute="trailing" constant="120" id="CWF-T5-VV0"/>
-                            <constraint firstItem="yF2-LK-Bwj" firstAttribute="leading" secondItem="DNQ-Va-jBj" secondAttribute="trailing" constant="161" id="ElP-cJ-7zb"/>
                             <constraint firstAttribute="bottom" secondItem="yF2-LK-Bwj" secondAttribute="bottom" constant="20" id="GXz-ob-JWm"/>
                             <constraint firstAttribute="trailing" secondItem="Ham-rN-COt" secondAttribute="trailing" constant="20" id="HI5-ua-gwn"/>
                             <constraint firstItem="hUF-hi-xJW" firstAttribute="leading" secondItem="mK0-F2-3ay" secondAttribute="trailing" constant="50" id="JWA-FQ-WKM"/>
@@ -495,10 +504,12 @@
                             <constraint firstItem="PQq-Mh-Poy" firstAttribute="leading" secondItem="hZZ-OL-P6s" secondAttribute="trailing" constant="5" id="W16-Aj-XWd"/>
                             <constraint firstAttribute="bottom" secondItem="DNQ-Va-jBj" secondAttribute="bottom" constant="20" id="WBK-AU-HAd"/>
                             <constraint firstItem="VUm-TD-SSW" firstAttribute="top" secondItem="De7-JV-Dde" secondAttribute="bottom" constant="35" id="WF1-zz-Zv8"/>
+                            <constraint firstItem="FBz-7g-INF" firstAttribute="leading" secondItem="DNQ-Va-jBj" secondAttribute="trailing" constant="142" id="XZX-Y3-8yB"/>
                             <constraint firstItem="yF2-LK-Bwj" firstAttribute="top" secondItem="Aqe-jd-aN4" secondAttribute="bottom" constant="20" id="XqQ-Kg-XXV"/>
                             <constraint firstItem="9j5-oa-LTH" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="Ych-lz-7FS"/>
                             <constraint firstItem="JnW-Dg-bBy" firstAttribute="leading" secondItem="3Wg-Ut-OfI" secondAttribute="trailing" constant="5" id="bGV-IF-37i"/>
                             <constraint firstItem="VUm-TD-SSW" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="bmq-qv-a5h"/>
+                            <constraint firstItem="yF2-LK-Bwj" firstAttribute="leading" secondItem="FBz-7g-INF" secondAttribute="trailing" constant="7" id="gGT-O2-xxp"/>
                             <constraint firstItem="hZZ-OL-P6s" firstAttribute="top" secondItem="Ham-rN-COt" secondAttribute="bottom" constant="36" id="ghN-j5-5yY"/>
                             <constraint firstItem="z9d-0c-PLF" firstAttribute="top" secondItem="ttK-r0-sQh" secondAttribute="bottom" constant="10" id="hnb-Tz-4cI"/>
                             <constraint firstItem="hUF-hi-xJW" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="70" id="hoD-Qd-2zg"/>
@@ -507,6 +518,7 @@
                             <constraint firstItem="De7-JV-Dde" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="n7B-Ia-bpe"/>
                             <constraint firstItem="z9d-0c-PLF" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="nwe-80-4QL"/>
                             <constraint firstItem="mK0-F2-3ay" firstAttribute="leading" secondItem="VUm-TD-SSW" secondAttribute="trailing" constant="50" id="oJ5-lb-KKI"/>
+                            <constraint firstAttribute="bottom" secondItem="FBz-7g-INF" secondAttribute="bottom" constant="20" symbolic="YES" id="pZ7-R7-DMM"/>
                             <constraint firstItem="rjL-fk-42N" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="120" id="qEJ-zi-2ij"/>
                             <constraint firstAttribute="trailing" secondItem="Aqe-jd-aN4" secondAttribute="trailing" constant="20" id="rJB-XP-tHc"/>
                             <constraint firstItem="ttK-r0-sQh" firstAttribute="top" secondItem="9j5-oa-LTH" secondAttribute="bottom" constant="10" id="vIM-yd-Vgu"/>
@@ -555,4 +567,7 @@ ESC drücken um abzubrechen.</string>
             <point key="canvasLocation" x="389" y="205"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSRefreshFreestandingTemplate" width="15" height="15"/>
+    </resources>
 </document>

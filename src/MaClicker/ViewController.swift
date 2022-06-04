@@ -8,6 +8,7 @@
 
 import Cocoa
 import Sauce
+import Sparkle
 
 class ViewController: NSViewController, NSTextFieldDelegate, GetKeyPopoverViewControllerDelegate {
     @IBOutlet weak var cpsTextField: NSTextField!
@@ -19,6 +20,7 @@ class ViewController: NSViewController, NSTextFieldDelegate, GetKeyPopoverViewCo
     var clickerTimer: Timer!
     var isHoldActive: Bool = false
     var currentLoop: Int = 0
+    var updaterController: SPUStandardUpdaterController!
     
     ///
     /// View did load
@@ -53,6 +55,33 @@ class ViewController: NSViewController, NSTextFieldDelegate, GetKeyPopoverViewCo
                 self.toggleMouse()
             }
         }
+        
+        // Check for accessibility permission
+        if !AXIsProcessTrusted() {
+            let answer = shouldOpenSystemSettings()
+            
+            //Open accessibility settings
+            if (answer) {
+                let url = URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility")
+                NSWorkspace.shared.open(url!)
+            }
+        }
+        
+        //Check for newer versions
+        updaterController = SPUStandardUpdaterController(startingUpdater: true, updaterDelegate: nil, userDriverDelegate: nil)
+    }
+    
+    ///
+    /// Ask if accessibility settings should open
+    ///
+    func shouldOpenSystemSettings() -> Bool {
+        let alert = NSAlert()
+        alert.messageText = NSLocalizedString("accessibility_alert_message", comment: "")
+        alert.informativeText = NSLocalizedString("accessibility_alert_informative_text", comment: "")
+        alert.alertStyle = .critical
+        alert.addButton(withTitle: NSLocalizedString("accessibility_alert_open_settings", comment: ""))
+        alert.addButton(withTitle: NSLocalizedString("accessibility_alert_ok", comment: ""))
+        return alert.runModal() == .alertFirstButtonReturn
     }
     
     
@@ -194,8 +223,17 @@ class ViewController: NSViewController, NSTextFieldDelegate, GetKeyPopoverViewCo
         }
     }
     
+    
+    
     ///
-    /// Quit Application
+    /// Update application
+    ///
+    @IBAction func updateButtonClicked(_ sender: Any) {
+        updaterController?.checkForUpdates(self)
+    }
+    
+    ///
+    /// Quit application
     ///
     @IBAction func quitButtonClicked(_ sender: Any) {
         NSApplication.shared.terminate(sender)
