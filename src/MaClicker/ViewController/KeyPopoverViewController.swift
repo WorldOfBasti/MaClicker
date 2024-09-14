@@ -1,5 +1,5 @@
 //
-//  GetKeyPopoverViewController.swift
+//  KeyPopoverViewController.swift
 //  MaClicker
 //
 //  Created by Bastian Aunkofer on 12.11.21.
@@ -9,12 +9,12 @@
 import Foundation
 import AppKit
 
-protocol GetKeyPopoverViewControllerDelegate {
-    func keySelected(key: uint16)
+protocol KeyPopoverViewControllerDelegate {
+    func keySelected(keyCode: uint16)
 }
 
-class GetKeyPopoverViewController: NSViewController {
-    var delegate: GetKeyPopoverViewControllerDelegate?
+class KeyPopoverViewController: NSViewController {
+    var delegate: KeyPopoverViewControllerDelegate?
     var monitor: Any?
         
     override func viewWillAppear() {
@@ -26,7 +26,7 @@ class GetKeyPopoverViewController: NSViewController {
     
     lazy var handler: (NSEvent) -> NSEvent? = { (event) in
         // Notify delegate that key was pressed
-        self.delegate?.keySelected(key: event.keyCode)
+        self.delegate?.keySelected(keyCode: event.keyCode)
         return nil
     }
     

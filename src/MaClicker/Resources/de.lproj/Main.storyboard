@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22690"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,30 +16,30 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="MaClicker" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="Services" id="NMo-om-nkz">
+                                        <menuItem title="Dienste" id="NMo-om-nkz">
                                             <modifierMask key="keyEquivalentModifierMask"/>
-                                            <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
+                                            <menu key="submenu" title="Dienste" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide MaClicker" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="MaClicker ausblenden" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Hide Others" keyEquivalent="h" id="Vdr-fp-XzO">
+                                        <menuItem title="Andere ausblenden" keyEquivalent="h" id="Vdr-fp-XzO">
                                             <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                             <connections>
                                                 <action selector="hideOtherApplications:" target="Ady-hI-5gd" id="VT4-aY-XCT"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Show All" id="Kd2-mp-pUS">
+                                        <menuItem title="Alle einblenden" id="Kd2-mp-pUS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="unhideAllApplications:" target="Ady-hI-5gd" id="Dhg-Le-xox"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit MaClicker" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="MaClicker beenden" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -47,11 +47,11 @@
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="File" id="dMs-cI-mzQ">
+                            <menuItem title="Datei" id="dMs-cI-mzQ">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="File" id="bib-Uj-vzu">
+                                <menu key="submenu" title="Datei" id="bib-Uj-vzu">
                                     <items>
-                                        <menuItem title="Close" keyEquivalent="w" id="DVo-aG-piG">
+                                        <menuItem title="Schließen" keyEquivalent="w" id="DVo-aG-piG">
                                             <connections>
                                                 <action selector="performClose:" target="Ady-hI-5gd" id="HmO-Ls-i7Q"/>
                                             </connections>
@@ -59,71 +59,71 @@
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="Edit" id="5QF-Oa-p0T">
+                            <menuItem title="Bearbeiten" id="5QF-Oa-p0T">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Edit" id="W48-6f-4Dl">
+                                <menu key="submenu" title="Bearbeiten" id="W48-6f-4Dl">
                                     <items>
-                                        <menuItem title="Cut" keyEquivalent="x" id="uRl-iY-unG">
+                                        <menuItem title="Ausschneiden" keyEquivalent="x" id="uRl-iY-unG">
                                             <connections>
                                                 <action selector="cut:" target="Ady-hI-5gd" id="YJe-68-I9s"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Copy" keyEquivalent="c" id="x3v-GG-iWU">
+                                        <menuItem title="Kopieren" keyEquivalent="c" id="x3v-GG-iWU">
                                             <connections>
                                                 <action selector="copy:" target="Ady-hI-5gd" id="G1f-GL-Joy"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Paste" keyEquivalent="v" id="gVA-U4-sdL">
+                                        <menuItem title="Einfügen" keyEquivalent="v" id="gVA-U4-sdL">
                                             <connections>
                                                 <action selector="paste:" target="Ady-hI-5gd" id="UvS-8e-Qdg"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Paste and Match Style" keyEquivalent="V" id="WeT-3V-zwk">
+                                        <menuItem title="Einfügen und Stil anpassen" keyEquivalent="V" id="WeT-3V-zwk">
                                             <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                             <connections>
                                                 <action selector="pasteAsPlainText:" target="Ady-hI-5gd" id="cEh-KX-wJQ"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Delete" id="pa3-QI-u2k">
+                                        <menuItem title="Löschen" id="pa3-QI-u2k">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="delete:" target="Ady-hI-5gd" id="0Mk-Ml-PaM"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Select All" keyEquivalent="a" id="Ruw-6m-B2m">
+                                        <menuItem title="Alles auswählen" keyEquivalent="a" id="Ruw-6m-B2m">
                                             <connections>
                                                 <action selector="selectAll:" target="Ady-hI-5gd" id="VNm-Mi-diN"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="uyl-h8-XO2"/>
-                                        <menuItem title="Spelling and Grammar" id="Dv1-io-Yv7">
+                                        <menuItem title="Rechtschreibung und Grammatik" id="Dv1-io-Yv7">
                                             <modifierMask key="keyEquivalentModifierMask"/>
-                                            <menu key="submenu" title="Spelling" id="3IN-sU-3Bg">
+                                            <menu key="submenu" title="Rechtschreibung und Grammatik" id="3IN-sU-3Bg">
                                                 <items>
-                                                    <menuItem title="Show Spelling and Grammar" keyEquivalent=":" id="HFo-cy-zxI">
+                                                    <menuItem title="Rechtschreibung und Grammatik einblenden" keyEquivalent=":" id="HFo-cy-zxI">
                                                         <connections>
                                                             <action selector="showGuessPanel:" target="Ady-hI-5gd" id="vFj-Ks-hy3"/>
                                                         </connections>
                                                     </menuItem>
-                                                    <menuItem title="Check Document Now" keyEquivalent=";" id="hz2-CU-CR7">
+                                                    <menuItem title="Dokument jetzt prüfen" keyEquivalent=";" id="hz2-CU-CR7">
                                                         <connections>
                                                             <action selector="checkSpelling:" target="Ady-hI-5gd" id="fz7-VC-reM"/>
                                                         </connections>
                                                     </menuItem>
                                                     <menuItem isSeparatorItem="YES" id="bNw-od-mp5"/>
-                                                    <menuItem title="Check Spelling While Typing" id="rbD-Rh-wIN">
+                                                    <menuItem title="Während der Texteingabe prüfen" id="rbD-Rh-wIN">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
                                                             <action selector="toggleContinuousSpellChecking:" target="Ady-hI-5gd" id="7w6-Qz-0kB"/>
                                                         </connections>
                                                     </menuItem>
-                                                    <menuItem title="Check Grammar With Spelling" id="mK6-2p-4JG">
+                                                    <menuItem title="Rechtschreib- und Grammatikprüfung" id="mK6-2p-4JG">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
                                                             <action selector="toggleGrammarChecking:" target="Ady-hI-5gd" id="muD-Qn-j4w"/>
                                                         </connections>
                                                     </menuItem>
-                                                    <menuItem title="Correct Spelling Automatically" id="78Y-hA-62v">
+                                                    <menuItem title="Rechtschreibung automatisch korrigieren" id="78Y-hA-62v">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
                                                             <action selector="toggleAutomaticSpellingCorrection:" target="Ady-hI-5gd" id="2lM-Qi-WAP"/>
@@ -132,42 +132,42 @@
                                                 </items>
                                             </menu>
                                         </menuItem>
-                                        <menuItem title="Substitutions" id="9ic-FL-obx">
+                                        <menuItem title="Ersetzungen" id="9ic-FL-obx">
                                             <modifierMask key="keyEquivalentModifierMask"/>
-                                            <menu key="submenu" title="Substitutions" id="FeM-D8-WVr">
+                                            <menu key="submenu" title="Ersetzungen" id="FeM-D8-WVr">
                                                 <items>
-                                                    <menuItem title="Show Substitutions" id="z6F-FW-3nz">
+                                                    <menuItem title="Ersetzungen einblenden" id="z6F-FW-3nz">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
                                                             <action selector="orderFrontSubstitutionsPanel:" target="Ady-hI-5gd" id="oku-mr-iSq"/>
                                                         </connections>
                                                     </menuItem>
                                                     <menuItem isSeparatorItem="YES" id="gPx-C9-uUO"/>
-                                                    <menuItem title="Smart Copy/Paste" id="9yt-4B-nSM">
+                                                    <menuItem title="Intelligentes Kopieren/Einfügen" id="9yt-4B-nSM">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
                                                             <action selector="toggleSmartInsertDelete:" target="Ady-hI-5gd" id="3IJ-Se-DZD"/>
                                                         </connections>
                                                     </menuItem>
-                                                    <menuItem title="Smart Quotes" id="hQb-2v-fYv">
+                                                    <menuItem title="Intelligente Anführungszeichen" id="hQb-2v-fYv">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
                                                             <action selector="toggleAutomaticQuoteSubstitution:" target="Ady-hI-5gd" id="ptq-xd-QOA"/>
                                                         </connections>
                                                     </menuItem>
-                                                    <menuItem title="Smart Dashes" id="rgM-f4-ycn">
+                                                    <menuItem title="Intelligente Bindestriche" id="rgM-f4-ycn">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
                                                             <action selector="toggleAutomaticDashSubstitution:" target="Ady-hI-5gd" id="oCt-pO-9gS"/>
                                                         </connections>
                                                     </menuItem>
-                                                    <menuItem title="Smart Links" id="cwL-P1-jid">
+                                                    <menuItem title="Intelligente Links" id="cwL-P1-jid">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
                                                             <action selector="toggleAutomaticLinkDetection:" target="Ady-hI-5gd" id="Gip-E3-Fov"/>
                                                         </connections>
                                                     </menuItem>
-                                                    <menuItem title="Text Replacement" id="HFQ-gK-NFA">
+                                                    <menuItem title="Text ersetzen" id="HFQ-gK-NFA">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
                                                             <action selector="toggleAutomaticTextReplacement:" target="Ady-hI-5gd" id="DvP-Fe-Py6"/>
@@ -176,23 +176,23 @@
                                                 </items>
                                             </menu>
                                         </menuItem>
-                                        <menuItem title="Transformations" id="2oI-Rn-ZJC">
+                                        <menuItem title="Transformationen" id="2oI-Rn-ZJC">
                                             <modifierMask key="keyEquivalentModifierMask"/>
-                                            <menu key="submenu" title="Transformations" id="c8a-y6-VQd">
+                                            <menu key="submenu" title="Transformationen" id="c8a-y6-VQd">
                                                 <items>
-                                                    <menuItem title="Make Upper Case" id="vmV-6d-7jI">
+                                                    <menuItem title="Großbuchstaben" id="vmV-6d-7jI">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
                                                             <action selector="uppercaseWord:" target="Ady-hI-5gd" id="sPh-Tk-edu"/>
                                                         </connections>
                                                     </menuItem>
-                                                    <menuItem title="Make Lower Case" id="d9M-CD-aMd">
+                                                    <menuItem title="Kleinbuchstaben" id="d9M-CD-aMd">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
                                                             <action selector="lowercaseWord:" target="Ady-hI-5gd" id="iUZ-b5-hil"/>
                                                         </connections>
                                                     </menuItem>
-                                                    <menuItem title="Capitalize" id="UEZ-Bs-lqG">
+                                                    <menuItem title="Großschreiben" id="UEZ-Bs-lqG">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
                                                             <action selector="capitalizeWord:" target="Ady-hI-5gd" id="26H-TL-nsh"/>
@@ -201,17 +201,17 @@
                                                 </items>
                                             </menu>
                                         </menuItem>
-                                        <menuItem title="Speech" id="xrE-MZ-jX0">
+                                        <menuItem title="Sprachausgabe" id="xrE-MZ-jX0">
                                             <modifierMask key="keyEquivalentModifierMask"/>
-                                            <menu key="submenu" title="Speech" id="3rS-ZA-NoH">
+                                            <menu key="submenu" title="Sprachausgabe" id="3rS-ZA-NoH">
                                                 <items>
-                                                    <menuItem title="Start Speaking" id="Ynk-f8-cLZ">
+                                                    <menuItem title="Sprachausgabe beginnen" id="Ynk-f8-cLZ">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
                                                             <action selector="startSpeaking:" target="Ady-hI-5gd" id="654-Ng-kyl"/>
                                                         </connections>
                                                     </menuItem>
-                                                    <menuItem title="Stop Speaking" id="Oyz-dy-DGm">
+                                                    <menuItem title="Sprachausgabe stoppen" keyEquivalent="S" id="Oyz-dy-DGm">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
                                                             <action selector="stopSpeaking:" target="Ady-hI-5gd" id="dX8-6p-jy9"/>
@@ -223,23 +223,23 @@
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="Window" id="aUF-d1-5bR">
+                            <menuItem title="Fenster" id="aUF-d1-5bR">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
+                                <menu key="submenu" title="Fenster" systemMenu="window" id="Td7-aD-5lo">
                                     <items>
-                                        <menuItem title="Minimize" keyEquivalent="m" id="OY7-WF-poV">
+                                        <menuItem title="Im Dock ablegen" keyEquivalent="m" id="OY7-WF-poV">
                                             <connections>
                                                 <action selector="performMiniaturize:" target="Ady-hI-5gd" id="VwT-WD-YPe"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Zoom" id="R4o-n2-Eq4">
+                                        <menuItem title="Zoomen" id="R4o-n2-Eq4">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="performZoom:" target="Ady-hI-5gd" id="DIl-cC-cCs"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="eu3-7i-yIM"/>
-                                        <menuItem title="Bring All to Front" id="LE2-aR-0XJ">
+                                        <menuItem title="Alle nach vorne bringen" id="LE2-aR-0XJ">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="arrangeInFront:" target="Ady-hI-5gd" id="DRN-fu-gQh"/>
@@ -258,63 +258,64 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5" y="-6"/>
+            <point key="canvasLocation" x="32" y="5"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="XfG-lQ-9wD" customClass="ViewController" customModule="MaClicker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="XfG-lQ-9wD" customClass="MainViewController" customModule="MaClicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="346" height="230"/>
+                        <rect key="frame" x="0.0" y="0.0" width="409" height="230"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rjL-fk-42N">
-                                <rect key="frame" x="118" y="187" width="110" height="24"/>
+                                <rect key="frame" x="118" y="187" width="258" height="24"/>
                                 <segmentedCell key="cell" borderStyle="border" alignment="left" segmentDistribution="fillEqually" style="rounded" trackingMode="selectOne" id="7gf-Ei-bsk">
                                     <font key="font" metaFont="system"/>
                                     <segments>
-                                        <segment label="Click" selected="YES"/>
-                                        <segment label="Hold" tag="1"/>
+                                        <segment label="Umschalten" selected="YES"/>
+                                        <segment label="Halten" tag="1"/>
+                                        <segment label="Einrasten"/>
                                     </segments>
                                 </segmentedCell>
                                 <connections>
                                     <binding destination="ItM-Zv-1cj" name="selectedIndex" keyPath="values.ModeIndex" id="zTS-Tt-9im"/>
                                 </connections>
                             </segmentedControl>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="De7-JV-Dde">
-                                <rect key="frame" x="18" y="192" width="42" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Mode:" id="KLB-eQ-Gfa">
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="De7-JV-Dde">
+                                <rect key="frame" x="18" y="192" width="49" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Modus:" id="KLB-eQ-Gfa">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VUm-TD-SSW">
-                                <rect key="frame" x="18" y="141" width="93" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Activation key:" id="r0p-eJ-peh">
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VUm-TD-SSW">
+                                <rect key="frame" x="18" y="141" width="114" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Aktivierungstaste:" id="r0p-eJ-peh">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mK0-F2-3ay">
-                                <rect key="frame" x="157" y="142" width="62" height="16"/>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mK0-F2-3ay">
+                                <rect key="frame" x="178" y="142" width="62" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="keyLabel" id="lRt-rp-eak">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <binding destination="ItM-Zv-1cj" name="value" keyPath="values.HotKey" id="qGJ-a9-gYT">
+                                    <binding destination="ItM-Zv-1cj" name="value" keyPath="values.ActivationKey" id="igi-xK-j1c">
                                         <dictionary key="options">
-                                            <string key="NSValueTransformerName">KeyCodeToKeyTransformer</string>
+                                            <string key="NSValueTransformerName">KeyCodeToCharTransformer</string>
                                         </dictionary>
                                     </binding>
                                 </connections>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hUF-hi-xJW">
-                                <rect key="frame" x="260" y="133" width="73" height="32"/>
-                                <buttonCell key="cell" type="push" title="Select" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XQt-Xe-v0N">
+                                <rect key="frame" x="281" y="133" width="115" height="32"/>
+                                <buttonCell key="cell" type="push" title="Auswählen" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XQt-Xe-v0N">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -322,23 +323,23 @@
                                     <action selector="selectButtonClicked:" target="XfG-lQ-9wD" id="J08-97-33U"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9j5-oa-LTH">
-                                <rect key="frame" x="18" y="115" width="92" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Mouse button:" id="2wl-1b-ZFe">
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9j5-oa-LTH">
+                                <rect key="frame" x="18" y="115" width="71" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Maustaste:" id="2wl-1b-ZFe">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ham-rN-COt">
-                                <rect key="frame" x="155" y="109" width="175" height="25"/>
-                                <popUpButtonCell key="cell" type="push" title="Left mouse button" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="tvN-uX-mPs" id="hDc-rk-fWL">
+                                <rect key="frame" x="134" y="109" width="259" height="25"/>
+                                <popUpButtonCell key="cell" type="push" title="Linke Maustaste" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="tvN-uX-mPs" id="hDc-rk-fWL">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <menu key="menu" id="Dbj-ac-Tcv">
                                         <items>
-                                            <menuItem title="Left mouse button" state="on" id="tvN-uX-mPs"/>
-                                            <menuItem title="Right mouse button" id="BaK-rw-qRa"/>
+                                            <menuItem title="Linke Maustaste" state="on" id="tvN-uX-mPs"/>
+                                            <menuItem title="Rechte Maustaste" id="BaK-rw-qRa"/>
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
@@ -346,72 +347,72 @@
                                     <binding destination="ItM-Zv-1cj" name="selectedIndex" keyPath="values.MouseButtonIndex" id="I8z-tk-8r3"/>
                                 </connections>
                             </popUpButton>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ttK-r0-sQh">
-                                <rect key="frame" x="18" y="89" width="116" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Clicks per second:" id="GgV-fP-diz">
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ttK-r0-sQh">
+                                <rect key="frame" x="18" y="89" width="124" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Klicks pro Sekunde:" id="GgV-fP-diz">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JnW-Dg-bBy">
-                                <rect key="frame" x="310" y="82" width="19" height="28"/>
+                                <rect key="frame" x="373" y="82" width="19" height="28"/>
                                 <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="Vgl-UY-HME"/>
                                 <connections>
-                                    <binding destination="ItM-Zv-1cj" name="value" keyPath="values.CPS" id="4J6-ko-vdL"/>
-                                    <binding destination="ItM-Zv-1cj" name="enabled" keyPath="values.ModeIndex" id="yj0-gL-UW9">
+                                    <binding destination="ItM-Zv-1cj" name="value" keyPath="values.ClicksPerSecond" id="h4C-gq-c6k"/>
+                                    <binding destination="ItM-Zv-1cj" name="enabled" keyPath="values.ModeIndex" id="e4i-Bx-caQ">
                                         <dictionary key="options">
-                                            <string key="NSValueTransformerName">ModeIndexToBoolTransformer</string>
+                                            <string key="NSValueTransformerName">AllowCPSTransformer</string>
                                         </dictionary>
                                     </binding>
                                 </connections>
                             </stepper>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Wg-Ut-OfI">
-                                <rect key="frame" x="182" y="85" width="126" height="21"/>
+                            <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Wg-Ut-OfI">
+                                <rect key="frame" x="190" y="85" width="181" height="21"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="4lF-px-sbo">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <binding destination="ItM-Zv-1cj" name="value" keyPath="values.CPS" id="0Pr-J7-eXW"/>
-                                    <binding destination="ItM-Zv-1cj" name="enabled" keyPath="values.ModeIndex" id="ejy-ae-Rjz">
+                                    <binding destination="ItM-Zv-1cj" name="value" keyPath="values.ClicksPerSecond" id="A9V-ye-9uq"/>
+                                    <binding destination="ItM-Zv-1cj" name="enabled" keyPath="values.ModeIndex" id="vKH-tU-DIa">
                                         <dictionary key="options">
-                                            <string key="NSValueTransformerName">ModeIndexToBoolTransformer</string>
+                                            <string key="NSValueTransformerName">AllowCPSTransformer</string>
                                         </dictionary>
                                     </binding>
                                     <outlet property="delegate" destination="XfG-lQ-9wD" id="aFS-s6-R7P"/>
                                 </connections>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="z9d-0c-PLF">
-                                <rect key="frame" x="18" y="63" width="67" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Click limit:" id="JBs-KS-2M3">
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="z9d-0c-PLF">
+                                <rect key="frame" x="18" y="63" width="70" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Klick Limit:" id="JBs-KS-2M3">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hZZ-OL-P6s">
-                                <rect key="frame" x="131" y="60" width="67" height="18"/>
-                                <buttonCell key="cell" type="check" title="Enable" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="KO7-xu-rIp">
+                                <rect key="frame" x="134" y="60" width="77" height="18"/>
+                                <buttonCell key="cell" type="check" title="Aktiviert" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="KO7-xu-rIp">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
                                     <binding destination="ItM-Zv-1cj" name="value" keyPath="values.LimitEnabled" id="I1U-j7-E6o"/>
-                                    <binding destination="ItM-Zv-1cj" name="enabled" keyPath="values.ModeIndex" id="FJX-sa-JxF">
+                                    <binding destination="ItM-Zv-1cj" name="enabled" keyPath="values.ModeIndex" id="FMd-D8-cx5">
                                         <dictionary key="options">
-                                            <string key="NSValueTransformerName">ModeIndexToBoolTransformer</string>
+                                            <string key="NSValueTransformerName">AllowLimitTransformer</string>
                                         </dictionary>
                                     </binding>
                                 </connections>
                             </button>
                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Aqe-jd-aN4">
-                                <rect key="frame" x="310" y="56" width="19" height="28"/>
+                                <rect key="frame" x="373" y="56" width="19" height="28"/>
                                 <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="nv4-kn-jQ6"/>
                                 <connections>
-                                    <binding destination="ItM-Zv-1cj" name="value" keyPath="values.Limit" id="WPk-4g-sB1"/>
-                                    <binding destination="ItM-Zv-1cj" name="enabled2" keyPath="values.LimitEnabled" previousBinding="UGt-Je-2kS" id="DlV-as-VIl">
+                                    <binding destination="ItM-Zv-1cj" name="value" keyPath="values.ClickLimit" id="EN7-Mo-iae"/>
+                                    <binding destination="ItM-Zv-1cj" name="enabled2" keyPath="values.LimitEnabled" previousBinding="s5x-0J-nLf" id="fk0-AG-sas">
                                         <dictionary key="options">
                                             <integer key="NSMultipleValuesPlaceholder" value="-1"/>
                                             <integer key="NSNoSelectionPlaceholder" value="-1"/>
@@ -419,23 +420,23 @@
                                             <integer key="NSNullPlaceholder" value="-1"/>
                                         </dictionary>
                                     </binding>
-                                    <binding destination="ItM-Zv-1cj" name="enabled" keyPath="values.ModeIndex" id="UGt-Je-2kS">
+                                    <binding destination="ItM-Zv-1cj" name="enabled" keyPath="values.ModeIndex" id="s5x-0J-nLf">
                                         <dictionary key="options">
-                                            <string key="NSValueTransformerName">ModeIndexToBoolTransformer</string>
+                                            <string key="NSValueTransformerName">AllowLimitTransformer</string>
                                         </dictionary>
                                     </binding>
                                 </connections>
                             </stepper>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PQq-Mh-Poy">
-                                <rect key="frame" x="203" y="59" width="105" height="21"/>
+                            <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PQq-Mh-Poy">
+                                <rect key="frame" x="216" y="59" width="155" height="21"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="08L-7A-nVC">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <binding destination="ItM-Zv-1cj" name="value" keyPath="values.Limit" id="JUX-69-vwg"/>
-                                    <binding destination="ItM-Zv-1cj" name="enabled2" keyPath="values.LimitEnabled" previousBinding="f2B-za-9d7" id="tbq-VV-z6t">
+                                    <binding destination="ItM-Zv-1cj" name="value" keyPath="values.ClickLimit" id="eBo-EG-Utp"/>
+                                    <binding destination="ItM-Zv-1cj" name="enabled2" keyPath="values.LimitEnabled" previousBinding="Qow-L0-gu6" id="gs1-WL-ZOK">
                                         <dictionary key="options">
                                             <integer key="NSMultipleValuesPlaceholder" value="-1"/>
                                             <integer key="NSNoSelectionPlaceholder" value="-1"/>
@@ -443,17 +444,17 @@
                                             <integer key="NSNullPlaceholder" value="-1"/>
                                         </dictionary>
                                     </binding>
-                                    <binding destination="ItM-Zv-1cj" name="enabled" keyPath="values.ModeIndex" id="f2B-za-9d7">
+                                    <binding destination="ItM-Zv-1cj" name="enabled" keyPath="values.ModeIndex" id="Qow-L0-gu6">
                                         <dictionary key="options">
-                                            <string key="NSValueTransformerName">ModeIndexToBoolTransformer</string>
+                                            <string key="NSValueTransformerName">AllowLimitTransformer</string>
                                         </dictionary>
                                     </binding>
                                     <outlet property="delegate" destination="XfG-lQ-9wD" id="Uzq-0V-DDh"/>
                                 </connections>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yF2-LK-Bwj">
-                                <rect key="frame" x="273" y="13" width="60" height="32"/>
-                                <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dQ2-Uy-QeZ">
+                                <rect key="frame" x="308" y="13" width="88" height="32"/>
+                                <buttonCell key="cell" type="push" title="Beenden" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dQ2-Uy-QeZ">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -461,22 +462,22 @@
                                     <action selector="quitButtonClicked:" target="XfG-lQ-9wD" id="fmX-Z8-tdI"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DNQ-Va-jBj">
-                                <rect key="frame" x="18" y="20" width="103" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="by WorldOfBasti" id="yr5-L8-mLr">
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DNQ-Va-jBj">
+                                <rect key="frame" x="18" y="20" width="132" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="von Bastian Aunkofer" id="yr5-L8-mLr">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bje-E0-eWa">
-                                <rect key="frame" x="233" y="13" width="45" height="32"/>
-                                <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSRefreshFreestandingTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Knj-HZ-t3f">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FBz-7g-INF">
+                                <rect key="frame" x="270" y="13" width="45" height="32"/>
+                                <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSRefreshFreestandingTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dYb-EZ-zsh">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="updateButtonClicked:" target="XfG-lQ-9wD" id="bb5-Tg-kmo"/>
+                                    <action selector="updateButtonClicked:" target="XfG-lQ-9wD" id="57O-5f-v61"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -488,17 +489,15 @@
                             <constraint firstItem="JnW-Dg-bBy" firstAttribute="top" secondItem="Ham-rN-COt" secondAttribute="bottom" constant="7" id="7DG-Az-sRo"/>
                             <constraint firstItem="Aqe-jd-aN4" firstAttribute="top" secondItem="JnW-Dg-bBy" secondAttribute="bottom" constant="6" id="8pX-f5-o0B"/>
                             <constraint firstItem="De7-JV-Dde" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="22" id="BA3-6K-sYU"/>
-                            <constraint firstAttribute="trailing" secondItem="rjL-fk-42N" secondAttribute="trailing" constant="120" id="CWF-T5-VV0"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rjL-fk-42N" secondAttribute="trailing" constant="20" id="CWF-T5-VV0"/>
                             <constraint firstAttribute="bottom" secondItem="yF2-LK-Bwj" secondAttribute="bottom" constant="20" id="GXz-ob-JWm"/>
                             <constraint firstAttribute="trailing" secondItem="Ham-rN-COt" secondAttribute="trailing" constant="20" id="HI5-ua-gwn"/>
-                            <constraint firstItem="Bje-E0-eWa" firstAttribute="leading" secondItem="DNQ-Va-jBj" secondAttribute="trailing" constant="121" id="IkX-hD-aXH"/>
                             <constraint firstItem="hUF-hi-xJW" firstAttribute="leading" secondItem="mK0-F2-3ay" secondAttribute="trailing" constant="50" id="JWA-FQ-WKM"/>
                             <constraint firstItem="Aqe-jd-aN4" firstAttribute="leading" secondItem="PQq-Mh-Poy" secondAttribute="trailing" constant="5" id="Koc-7W-jGI"/>
                             <constraint firstItem="PQq-Mh-Poy" firstAttribute="top" secondItem="3Wg-Ut-OfI" secondAttribute="bottom" constant="5" id="NJi-W0-GCd"/>
                             <constraint firstItem="3Wg-Ut-OfI" firstAttribute="leading" secondItem="ttK-r0-sQh" secondAttribute="trailing" constant="50" id="NRa-qJ-ogc"/>
                             <constraint firstAttribute="trailing" secondItem="JnW-Dg-bBy" secondAttribute="trailing" constant="20" symbolic="YES" id="Pec-VD-TUB"/>
                             <constraint firstItem="DNQ-Va-jBj" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="Pz2-e9-41o"/>
-                            <constraint firstItem="yF2-LK-Bwj" firstAttribute="leading" secondItem="Bje-E0-eWa" secondAttribute="trailing" constant="9" id="Qhb-yw-714"/>
                             <constraint firstItem="Ham-rN-COt" firstAttribute="top" secondItem="hUF-hi-xJW" secondAttribute="bottom" constant="7" id="QrZ-Mo-gnw"/>
                             <constraint firstItem="mK0-F2-3ay" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="72" id="S2J-ZL-MgQ"/>
                             <constraint firstItem="Ham-rN-COt" firstAttribute="leading" secondItem="9j5-oa-LTH" secondAttribute="trailing" constant="50" id="UQs-p5-xOX"/>
@@ -506,11 +505,12 @@
                             <constraint firstItem="PQq-Mh-Poy" firstAttribute="leading" secondItem="hZZ-OL-P6s" secondAttribute="trailing" constant="5" id="W16-Aj-XWd"/>
                             <constraint firstAttribute="bottom" secondItem="DNQ-Va-jBj" secondAttribute="bottom" constant="20" id="WBK-AU-HAd"/>
                             <constraint firstItem="VUm-TD-SSW" firstAttribute="top" secondItem="De7-JV-Dde" secondAttribute="bottom" constant="35" id="WF1-zz-Zv8"/>
+                            <constraint firstItem="FBz-7g-INF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="DNQ-Va-jBj" secondAttribute="trailing" constant="50" id="XZX-Y3-8yB"/>
                             <constraint firstItem="yF2-LK-Bwj" firstAttribute="top" secondItem="Aqe-jd-aN4" secondAttribute="bottom" constant="20" id="XqQ-Kg-XXV"/>
                             <constraint firstItem="9j5-oa-LTH" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="Ych-lz-7FS"/>
                             <constraint firstItem="JnW-Dg-bBy" firstAttribute="leading" secondItem="3Wg-Ut-OfI" secondAttribute="trailing" constant="5" id="bGV-IF-37i"/>
                             <constraint firstItem="VUm-TD-SSW" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="bmq-qv-a5h"/>
-                            <constraint firstAttribute="bottom" secondItem="Bje-E0-eWa" secondAttribute="bottom" constant="20" symbolic="YES" id="g0t-sI-AeM"/>
+                            <constraint firstItem="yF2-LK-Bwj" firstAttribute="leading" secondItem="FBz-7g-INF" secondAttribute="trailing" constant="7" id="gGT-O2-xxp"/>
                             <constraint firstItem="hZZ-OL-P6s" firstAttribute="top" secondItem="Ham-rN-COt" secondAttribute="bottom" constant="36" id="ghN-j5-5yY"/>
                             <constraint firstItem="z9d-0c-PLF" firstAttribute="top" secondItem="ttK-r0-sQh" secondAttribute="bottom" constant="10" id="hnb-Tz-4cI"/>
                             <constraint firstItem="hUF-hi-xJW" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="70" id="hoD-Qd-2zg"/>
@@ -519,6 +519,7 @@
                             <constraint firstItem="De7-JV-Dde" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="n7B-Ia-bpe"/>
                             <constraint firstItem="z9d-0c-PLF" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="nwe-80-4QL"/>
                             <constraint firstItem="mK0-F2-3ay" firstAttribute="leading" secondItem="VUm-TD-SSW" secondAttribute="trailing" constant="50" id="oJ5-lb-KKI"/>
+                            <constraint firstAttribute="bottom" secondItem="FBz-7g-INF" secondAttribute="bottom" constant="20" symbolic="YES" id="pZ7-R7-DMM"/>
                             <constraint firstItem="rjL-fk-42N" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="120" id="qEJ-zi-2ij"/>
                             <constraint firstAttribute="trailing" secondItem="Aqe-jd-aN4" secondAttribute="trailing" constant="20" id="rJB-XP-tHc"/>
                             <constraint firstItem="ttK-r0-sQh" firstAttribute="top" secondItem="9j5-oa-LTH" secondAttribute="bottom" constant="10" id="vIM-yd-Vgu"/>
@@ -535,22 +536,22 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="ItM-Zv-1cj"/>
             </objects>
-            <point key="canvasLocation" x="35" y="205"/>
+            <point key="canvasLocation" x="70.5" y="205"/>
         </scene>
-        <!--Get Key Popover View Controller-->
+        <!--Key Popover View Controller-->
         <scene sceneID="xF1-Uq-CoC">
             <objects>
-                <viewController storyboardIdentifier="GetKeyPopoverViewController" id="fFd-Kn-lPy" customClass="GetKeyPopoverViewController" customModule="MaClicker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GetKeyPopoverViewController" id="fFd-Kn-lPy" customClass="KeyPopoverViewController" customModule="MaClicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="kx7-0A-rHD">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="110"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="cKh-R0-Io0">
-                                <rect key="frame" x="34" y="39" width="133" height="32"/>
+                            <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="cKh-R0-Io0">
+                                <rect key="frame" x="29" y="39" width="142" height="32"/>
                                 <textFieldCell key="cell" selectable="YES" alignment="center" allowsEditingTextAttributes="YES" id="lh7-Io-tAg">
                                     <font key="font" metaFont="system"/>
-                                    <string key="title">Press hotkey.
-Press ESC to cancel.</string>
+                                    <string key="title">Taste drücken.
+ESC um abzubrechen.</string>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -564,10 +565,10 @@ Press ESC to cancel.</string>
                 </viewController>
                 <customObject id="apw-E8-OcK" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="352" y="207"/>
+            <point key="canvasLocation" x="389" y="205"/>
         </scene>
     </scenes>
     <resources>
-        <image name="NSRefreshFreestandingTemplate" width="15" height="15"/>
+        <image name="NSRefreshFreestandingTemplate" width="19" height="19"/>
     </resources>
 </document>

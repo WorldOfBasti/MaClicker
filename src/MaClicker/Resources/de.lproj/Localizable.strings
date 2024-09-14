@@ -9,6 +9,6 @@
 
 // Accessibility alert
 "accessibility_alert_message" = "Berechtigung für Bedienungs­hilfen benötigt";
-"accessibility_alert_informative_text" = "MaClicker benötigt die Berechtigung auf Bedienungshilfen, um zu funktionieren";
+"accessibility_alert_informative_text" = "MaClicker benötigt die Berechtigung auf Bedienungshilfen, um zu funktionieren.";
 "accessibility_alert_ok" = "Ok";
 "accessibility_alert_open_settings" = "Zu den Einstellungen";

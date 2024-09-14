@@ -7,38 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		851EB554273EE5820016F8CF /* GetKeyPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851EB553273EE5820016F8CF /* GetKeyPopoverViewController.swift */; };
-		851EB556273F05080016F8CF /* KeyCodeToKeyTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851EB555273F05080016F8CF /* KeyCodeToKeyTransformer.swift */; };
+		034F53092C93B5F1005DD00B /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 034F53082C93B5F1005DD00B /* Sparkle */; };
+		034F530F2C93B698005DD00B /* Sauce in Frameworks */ = {isa = PBXBuildFile; productRef = 034F530E2C93B698005DD00B /* Sauce */; };
+		03638E2E2C9466EF00128C61 /* AutoClicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03638E2D2C9466EF00128C61 /* AutoClicker.swift */; };
+		03638E302C9480F200128C61 /* AllowLimitTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03638E2F2C9480F200128C61 /* AllowLimitTransformer.swift */; };
+		03638E332C95DC4C00128C61 /* ClickerMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03638E322C95DC4C00128C61 /* ClickerMode.swift */; };
+		851EB554273EE5820016F8CF /* KeyPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851EB553273EE5820016F8CF /* KeyPopoverViewController.swift */; };
+		851EB556273F05080016F8CF /* KeyCodeToCharTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851EB555273F05080016F8CF /* KeyCodeToCharTransformer.swift */; };
 		85404CB0284AC1AE002B38F9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 85404CB2284AC1AE002B38F9 /* Localizable.strings */; };
 		855698AE2737F80E0006B556 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855698AD2737F80E0006B556 /* AppDelegate.swift */; };
-		855698B02737F80E0006B556 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855698AF2737F80E0006B556 /* ViewController.swift */; };
+		855698B02737F80E0006B556 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855698AF2737F80E0006B556 /* MainViewController.swift */; };
 		855698B22737F80F0006B556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 855698B12737F80F0006B556 /* Assets.xcassets */; };
 		855698B52737F80F0006B556 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 855698B32737F80F0006B556 /* Main.storyboard */; };
-		8573C4312745AD97000248F8 /* MenuBarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8573C4302745AD97000248F8 /* MenuBarIcon.png */; };
-		85AFCCA1274305DA00F52832 /* OnlyIntegerValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFCCA0274305DA00F52832 /* OnlyIntegerValueFormatter.swift */; };
-		85FB18152741B29700597FE9 /* ModeIndexToBoolTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FB18142741B29700597FE9 /* ModeIndexToBoolTransformer.swift */; };
-		A59613E893C5B8E14A8C9C5B /* Pods_MaClicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6709A88BB4B4C5D9D3AA2D /* Pods_MaClicker.framework */; };
+		85AFCCA1274305DA00F52832 /* ForceIntegerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFCCA0274305DA00F52832 /* ForceIntegerFormatter.swift */; };
+		85FB18152741B29700597FE9 /* AllowCPSTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FB18142741B29700597FE9 /* AllowCPSTransformer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A6709A88BB4B4C5D9D3AA2D /* Pods_MaClicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaClicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D49550DF5715653F45E939C /* Pods-MaClicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaClicker.release.xcconfig"; path = "Target Support Files/Pods-MaClicker/Pods-MaClicker.release.xcconfig"; sourceTree = "<group>"; };
-		606B1C52629B66BCB85C8925 /* Pods-MaClicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaClicker.debug.xcconfig"; path = "Target Support Files/Pods-MaClicker/Pods-MaClicker.debug.xcconfig"; sourceTree = "<group>"; };
-		851EB553273EE5820016F8CF /* GetKeyPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetKeyPopoverViewController.swift; sourceTree = "<group>"; };
-		851EB555273F05080016F8CF /* KeyCodeToKeyTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCodeToKeyTransformer.swift; sourceTree = "<group>"; };
+		03638E2D2C9466EF00128C61 /* AutoClicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoClicker.swift; sourceTree = "<group>"; };
+		03638E2F2C9480F200128C61 /* AllowLimitTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowLimitTransformer.swift; sourceTree = "<group>"; };
+		03638E322C95DC4C00128C61 /* ClickerMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickerMode.swift; sourceTree = "<group>"; };
+		851EB553273EE5820016F8CF /* KeyPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPopoverViewController.swift; sourceTree = "<group>"; };
+		851EB555273F05080016F8CF /* KeyCodeToCharTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCodeToCharTransformer.swift; sourceTree = "<group>"; };
 		85404CB1284AC1AE002B38F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		85404CB3284AC1B2002B38F9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		855698AA2737F80E0006B556 /* MaClicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaClicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		855698AD2737F80E0006B556 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		855698AF2737F80E0006B556 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		855698AF2737F80E0006B556 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		855698B12737F80F0006B556 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		855698B62737F80F0006B556 /* MaClicker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MaClicker.entitlements; sourceTree = "<group>"; };
 		855698BC273802C10006B556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8573C41627458189000248F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8573C418274581E9000248F8 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = de; path = de.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8573C4302745AD97000248F8 /* MenuBarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuBarIcon.png; sourceTree = "<group>"; };
-		85AFCCA0274305DA00F52832 /* OnlyIntegerValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyIntegerValueFormatter.swift; sourceTree = "<group>"; };
-		85FB18142741B29700597FE9 /* ModeIndexToBoolTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeIndexToBoolTransformer.swift; sourceTree = "<group>"; };
+		85AFCCA0274305DA00F52832 /* ForceIntegerFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceIntegerFormatter.swift; sourceTree = "<group>"; };
+		85FB18142741B29700597FE9 /* AllowCPSTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowCPSTransformer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,20 +48,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A59613E893C5B8E14A8C9C5B /* Pods_MaClicker.framework in Frameworks */,
+				034F530F2C93B698005DD00B /* Sauce in Frameworks */,
+				034F53092C93B5F1005DD00B /* Sparkle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2C506373236CD06D60FBA35D /* Pods */ = {
+		03290F362C93C06E00EF34EE /* Transformer */ = {
 			isa = PBXGroup;
 			children = (
-				606B1C52629B66BCB85C8925 /* Pods-MaClicker.debug.xcconfig */,
-				1D49550DF5715653F45E939C /* Pods-MaClicker.release.xcconfig */,
+				851EB555273F05080016F8CF /* KeyCodeToCharTransformer.swift */,
+				85FB18142741B29700597FE9 /* AllowCPSTransformer.swift */,
+				03638E2F2C9480F200128C61 /* AllowLimitTransformer.swift */,
 			);
-			path = Pods;
+			path = Transformer;
+			sourceTree = "<group>";
+		};
+		03290F372C93C08800EF34EE /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				85AFCCA0274305DA00F52832 /* ForceIntegerFormatter.swift */,
+			);
+			path = Formatter;
+			sourceTree = "<group>";
+		};
+		03290F382C93C09700EF34EE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				855698AF2737F80E0006B556 /* MainViewController.swift */,
+				851EB553273EE5820016F8CF /* KeyPopoverViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		03638E2C2C9466DF00128C61 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				03638E2D2C9466EF00128C61 /* AutoClicker.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		03638E312C95DC3900128C61 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				03638E322C95DC4C00128C61 /* ClickerMode.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		855698A12737F80E0006B556 = {
@@ -67,8 +104,6 @@
 			children = (
 				855698AC2737F80E0006B556 /* MaClicker */,
 				855698AB2737F80E0006B556 /* Products */,
-				2C506373236CD06D60FBA35D /* Pods */,
-				9401783A6228BD455A4878DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,18 +118,16 @@
 		855698AC2737F80E0006B556 /* MaClicker */ = {
 			isa = PBXGroup;
 			children = (
-				8573C41B27459FC7000248F8 /* Resources */,
 				855698BC273802C10006B556 /* Info.plist */,
-				855698AD2737F80E0006B556 /* AppDelegate.swift */,
-				855698AF2737F80E0006B556 /* ViewController.swift */,
-				85AFCCA0274305DA00F52832 /* OnlyIntegerValueFormatter.swift */,
-				85FB18142741B29700597FE9 /* ModeIndexToBoolTransformer.swift */,
-				851EB555273F05080016F8CF /* KeyCodeToKeyTransformer.swift */,
-				855698B12737F80F0006B556 /* Assets.xcassets */,
-				855698B32737F80F0006B556 /* Main.storyboard */,
-				851EB553273EE5820016F8CF /* GetKeyPopoverViewController.swift */,
 				855698B62737F80F0006B556 /* MaClicker.entitlements */,
-				85404CB2284AC1AE002B38F9 /* Localizable.strings */,
+				855698B12737F80F0006B556 /* Assets.xcassets */,
+				8573C41B27459FC7000248F8 /* Resources */,
+				03290F362C93C06E00EF34EE /* Transformer */,
+				03290F372C93C08800EF34EE /* Formatter */,
+				03638E2C2C9466DF00128C61 /* Helpers */,
+				03638E312C95DC3900128C61 /* Models */,
+				03290F382C93C09700EF34EE /* ViewController */,
+				855698AD2737F80E0006B556 /* AppDelegate.swift */,
 			);
 			path = MaClicker;
 			sourceTree = "<group>";
@@ -102,17 +135,10 @@
 		8573C41B27459FC7000248F8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8573C4302745AD97000248F8 /* MenuBarIcon.png */,
+				855698B32737F80F0006B556 /* Main.storyboard */,
+				85404CB2284AC1AE002B38F9 /* Localizable.strings */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		9401783A6228BD455A4878DE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0A6709A88BB4B4C5D9D3AA2D /* Pods_MaClicker.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,17 +148,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 855698B92737F80F0006B556 /* Build configuration list for PBXNativeTarget "MaClicker" */;
 			buildPhases = (
-				126B7087C237486ACBC91300 /* [CP] Check Pods Manifest.lock */,
 				855698A62737F80E0006B556 /* Sources */,
 				855698A72737F80E0006B556 /* Frameworks */,
 				855698A82737F80E0006B556 /* Resources */,
-				094C936FA4712A9C35CC612E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MaClicker;
+			packageProductDependencies = (
+				034F53082C93B5F1005DD00B /* Sparkle */,
+				034F530E2C93B698005DD00B /* Sauce */,
+			);
 			productName = MaClicker;
 			productReference = 855698AA2737F80E0006B556 /* MaClicker.app */;
 			productType = "com.apple.product-type.application";
@@ -162,6 +190,10 @@
 				de,
 			);
 			mainGroup = 855698A12737F80E0006B556;
+			packageReferences = (
+				034F53072C93B5F1005DD00B /* XCRemoteSwiftPackageReference "Sparkle" */,
+				034F530D2C93B698005DD00B /* XCRemoteSwiftPackageReference "Sauce" */,
+			);
 			productRefGroup = 855698AB2737F80E0006B556 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -176,7 +208,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8573C4312745AD97000248F8 /* MenuBarIcon.png in Resources */,
 				85404CB0284AC1AE002B38F9 /* Localizable.strings in Resources */,
 				855698B22737F80F0006B556 /* Assets.xcassets in Resources */,
 				855698B52737F80F0006B556 /* Main.storyboard in Resources */,
@@ -185,59 +216,20 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		094C936FA4712A9C35CC612E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MaClicker/Pods-MaClicker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MaClicker/Pods-MaClicker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MaClicker/Pods-MaClicker-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		126B7087C237486ACBC91300 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MaClicker-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		855698A62737F80E0006B556 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				851EB554273EE5820016F8CF /* GetKeyPopoverViewController.swift in Sources */,
-				85FB18152741B29700597FE9 /* ModeIndexToBoolTransformer.swift in Sources */,
-				855698B02737F80E0006B556 /* ViewController.swift in Sources */,
-				85AFCCA1274305DA00F52832 /* OnlyIntegerValueFormatter.swift in Sources */,
+				851EB554273EE5820016F8CF /* KeyPopoverViewController.swift in Sources */,
+				03638E302C9480F200128C61 /* AllowLimitTransformer.swift in Sources */,
+				85FB18152741B29700597FE9 /* AllowCPSTransformer.swift in Sources */,
+				855698B02737F80E0006B556 /* MainViewController.swift in Sources */,
+				85AFCCA1274305DA00F52832 /* ForceIntegerFormatter.swift in Sources */,
 				855698AE2737F80E0006B556 /* AppDelegate.swift in Sources */,
-				851EB556273F05080016F8CF /* KeyCodeToKeyTransformer.swift in Sources */,
+				851EB556273F05080016F8CF /* KeyCodeToCharTransformer.swift in Sources */,
+				03638E332C95DC4C00128C61 /* ClickerMode.swift in Sources */,
+				03638E2E2C9466EF00128C61 /* AutoClicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +309,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -373,7 +365,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -384,7 +376,6 @@
 		};
 		855698BA2737F80F0006B556 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 606B1C52629B66BCB85C8925 /* Pods-MaClicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -393,7 +384,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = S5XDVPQ9J6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -406,8 +397,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 1.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.worldofbasti.maclicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -419,7 +410,6 @@
 		};
 		855698BB2737F80F0006B556 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D49550DF5715653F45E939C /* Pods-MaClicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -428,7 +418,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = S5XDVPQ9J6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -441,8 +431,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 1.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.worldofbasti.maclicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -473,6 +463,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		034F53072C93B5F1005DD00B /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.4;
+			};
+		};
+		034F530D2C93B698005DD00B /* XCRemoteSwiftPackageReference "Sauce" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Clipy/Sauce";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		034F53082C93B5F1005DD00B /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 034F53072C93B5F1005DD00B /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
+		034F530E2C93B698005DD00B /* Sauce */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 034F530D2C93B698005DD00B /* XCRemoteSwiftPackageReference "Sauce" */;
+			productName = Sauce;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 855698A22737F80E0006B556 /* Project object */;
 }

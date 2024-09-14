@@ -1,5 +1,5 @@
 //
-//  ModeIndexToBoolTransformer.swift
+//  AllowCPSTransformer.swift
 //  MaClicker
 //
 //  Created by Bastian Aunkofer on 14.11.21.
@@ -8,14 +8,16 @@
 
 import Foundation
 
-@objc(ModeIndexToBoolTransformer)
-public final class ModeIndexToBoolTransformer: ValueTransformer {
-    // Return true if click is selected
+@objc(AllowCPSTransformer)
+public final class AllowCPSTransformer: ValueTransformer {
+    // Only when Toggle or Hold is selected
     public override func transformedValue(_ value: Any?) -> Any? {
         let index = value as? Int ?? 0
-        if index == 0 {
+        switch index {
+        case 0, 1:
             return true
-        } else {
+            
+        default:
             return false
         }
     }

@@ -8,7 +8,7 @@
 */
 
 // Accessibility alert
-"accessibility_alert_message" = "Permission for accessibility needed";
-"accessibility_alert_informative_text" = "MaClicker needs the permission for accessibility to work";
+"accessibility_alert_message" = "Permission for accessibility required";
+"accessibility_alert_informative_text" = "MaClicker needs permissions for accessibility to work.";
 "accessibility_alert_ok" = "Ok";
 "accessibility_alert_open_settings" = "Open settings";

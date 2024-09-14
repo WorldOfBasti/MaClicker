@@ -14,19 +14,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let popover = NSPopover()
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Set the default value of enabled limit to false to prevent some issues at first startup
-        UserDefaults.standard.register(defaults: ["LimitEnabled" : false])
+        // Set default UserDefaults
+        UserDefaults.standard.register(defaults: [
+            "ClicksPerSecond": 10,
+            "LimitEnabled" : false,
+            "ClickLimit": 100
+        ])
         
         // Set up menubar icon
-        let icon = NSImage(named: "MenuBarIcon")
+        let icon = NSImage(named: "MenubarIcon")
+        icon?.size = NSSize(width: 16, height: 16)
         icon?.isTemplate = true
-        
         statusItem.button?.image = icon
         statusItem.button?.target = self
         statusItem.button?.action = #selector(togglePopOver)
         
         let storyBoard = NSStoryboard(name: "Main", bundle: nil)
-        guard let viewController = storyBoard.instantiateController(withIdentifier: "ViewController") as? ViewController else { fatalError("Unable to find ViewController!") }
+        guard let viewController = storyBoard.instantiateController(withIdentifier: "ViewController") as? MainViewController else { fatalError("Unable to find ViewController!") }
         popover.contentViewController = viewController
         popover.behavior = .transient
         
@@ -36,20 +40,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         AXIsProcessTrustedWithOptions(options as CFDictionary?)
         
         // Show Popover for first time
-        togglePopOver()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {     // Wait to prevent popover appears at wrong position
+            self.togglePopOver()
+        }
     }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
-    }
-
+    
     func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
         return true
     }
 
-    ///
     /// Show/hide popover
-    ///
     @objc func togglePopOver() {
         guard let button = statusItem.button else { fatalError("Could not find status item button!") }
         
