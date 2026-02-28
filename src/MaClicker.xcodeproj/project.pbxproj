@@ -21,6 +21,7 @@
 		855698B52737F80F0006B556 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 855698B32737F80F0006B556 /* Main.storyboard */; };
 		85AFCCA1274305DA00F52832 /* ForceIntegerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFCCA0274305DA00F52832 /* ForceIntegerFormatter.swift */; };
 		85FB18152741B29700597FE9 /* AllowCPSTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FB18142741B29700597FE9 /* AllowCPSTransformer.swift */; };
+		B69CD5022F52FD1300F82450 /* MODIFIER_KEYS_FEATURE.md in Resources */ = {isa = PBXBuildFile; fileRef = B69CD5012F52FD1300F82450 /* MODIFIER_KEYS_FEATURE.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		8573C418274581E9000248F8 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = de; path = de.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85AFCCA0274305DA00F52832 /* ForceIntegerFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceIntegerFormatter.swift; sourceTree = "<group>"; };
 		85FB18142741B29700597FE9 /* AllowCPSTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowCPSTransformer.swift; sourceTree = "<group>"; };
+		B69CD5012F52FD1300F82450 /* MODIFIER_KEYS_FEATURE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MODIFIER_KEYS_FEATURE.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				03638E312C95DC3900128C61 /* Models */,
 				03290F382C93C09700EF34EE /* ViewController */,
 				855698AD2737F80E0006B556 /* AppDelegate.swift */,
+				B69CD5012F52FD1300F82450 /* MODIFIER_KEYS_FEATURE.md */,
 			);
 			path = MaClicker;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B69CD5022F52FD1300F82450 /* MODIFIER_KEYS_FEATURE.md in Resources */,
 				85404CB0284AC1AE002B38F9 /* Localizable.strings in Resources */,
 				855698B22737F80F0006B556 /* Assets.xcassets in Resources */,
 				855698B52737F80F0006B556 /* Main.storyboard in Resources */,

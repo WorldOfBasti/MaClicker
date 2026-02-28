@@ -15,6 +15,7 @@ class MainViewController: NSViewController {
     @IBOutlet weak var limitTextField: NSTextField!
     @IBOutlet weak var cpsStepper: NSStepper!
     @IBOutlet weak var limitStepper: NSStepper!
+    @IBOutlet weak var activationKeyLabel: NSTextField!
     
     var keyPopover: NSPopover!
     var updaterController: SPUStandardUpdaterController!
@@ -42,6 +43,9 @@ class MainViewController: NSViewController {
         limitStepper.increment = 10
         limitStepper.maxValue = Double.infinity
         
+        // Update activation key display
+        updateActivationKeyDisplay()
+        
         // Check for accessibility permission
         if !AXIsProcessTrusted() {
             let result = shouldOpenSystemSettings()
@@ -55,6 +59,38 @@ class MainViewController: NSViewController {
         updaterController = SPUStandardUpdaterController(startingUpdater: true, updaterDelegate: nil, userDriverDelegate: nil)
         
         autoClicker = AutoClicker()
+    }
+    
+    
+    /// Update the activation key label with the current key combination
+    private func updateActivationKeyDisplay() {
+        let qwertyKeyCode = UserDefaults.standard.integer(forKey: "ActivationKey")
+        let modifiersRaw = UserDefaults.standard.integer(forKey: "ActivationModifiers")
+        
+        // If no key is set yet (0 is default), show "None"
+        guard qwertyKeyCode != 0 else {
+            activationKeyLabel?.stringValue = "None"
+            return
+        }
+        
+        let modifiers = NSEvent.ModifierFlags(rawValue: UInt(modifiersRaw))
+        
+        // Get the key character
+        guard let key = Key(QWERTYKeyCode: qwertyKeyCode) else {
+            activationKeyLabel?.stringValue = "Unknown"
+            return
+        }
+        
+        let keyCode = Sauce.shared.keyCode(for: key)
+        let character = Sauce.shared.character(for: Int(keyCode), cocoaModifiers: []) ?? "?"
+        
+        // Build the display string with modifiers
+        let modifierString = modifierFlagsToString(modifiers)
+        let displayString = modifierString.isEmpty ? character : "\(modifierString)\(character)"
+        
+        // Force unbind to ensure programmatic updates work
+        activationKeyLabel?.unbind(.value)
+        activationKeyLabel?.stringValue = displayString.uppercased()
     }
     
     
@@ -126,12 +162,42 @@ extension MainViewController: NSTextFieldDelegate {
 
 extension MainViewController: KeyPopoverViewControllerDelegate {
     /// Activation key in Popover was selected
-    func keySelected(keyCode: uint16) {
+    func keySelected(keyCode: UInt16, modifiers: NSEvent.ModifierFlags) {
         if keyCode != Sauce.shared.keyCode(for: .escape) {      // Don't save Escape key
             let key = Sauce.shared.key(for: Int(keyCode))
+            
+            // Save modifier flags first (only relevant ones: command, option, shift, control)
+            let relevantModifiers: NSEvent.ModifierFlags = [.command, .option, .shift, .control]
+            let savedModifiers = modifiers.intersection(relevantModifiers)
+            UserDefaults.standard.set(Int(savedModifiers.rawValue), forKey: "ActivationModifiers")
+            
+            // Save key code after modifiers so the transformer can read both
             UserDefaults.standard.set(key?.QWERTYKeyCode ?? keyCode, forKey: "ActivationKey")
+            
+            // Update the display
+            updateActivationKeyDisplay()
         }
         
         keyPopover.performClose(self)
+    }
+    
+    /// Converts modifier flags to a human-readable string
+    private func modifierFlagsToString(_ modifiers: NSEvent.ModifierFlags) -> String {
+        var components: [String] = []
+        
+        if modifiers.contains(.control) {
+            components.append("⌃")
+        }
+        if modifiers.contains(.option) {
+            components.append("⌥")
+        }
+        if modifiers.contains(.shift) {
+            components.append("⇧")
+        }
+        if modifiers.contains(.command) {
+            components.append("⌘")
+        }
+        
+        return components.joined()
     }
 }

@@ -18,7 +18,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         UserDefaults.standard.register(defaults: [
             "ClicksPerSecond": 10,
             "LimitEnabled" : false,
-            "ClickLimit": 100
+            "ClickLimit": 100,
+            "ActivationModifiers": 0  // No modifiers by default
         ])
         
         // Set up menubar icon
