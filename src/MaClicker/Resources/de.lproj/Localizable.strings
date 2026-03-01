@@ -12,3 +12,10 @@
 "accessibility_alert_informative_text" = "MaClicker benötigt die Berechtigung auf Bedienungshilfen, um zu funktionieren.";
 "accessibility_alert_ok" = "Ok";
 "accessibility_alert_open_settings" = "Zu den Einstellungen";
+
+// Humanise section
+"humanise_label" = "Humanisieren:";
+"humanise_enable" = "Aktivieren";
+"humanise_fatigue_arc" = "Ermüdung";
+"humanise_noise_drift" = "Rauschen";
+"humanise_collapses" = "Einbrüche";

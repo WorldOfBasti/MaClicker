@@ -10,6 +10,7 @@
 		034F53092C93B5F1005DD00B /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 034F53082C93B5F1005DD00B /* Sparkle */; };
 		034F530F2C93B698005DD00B /* Sauce in Frameworks */ = {isa = PBXBuildFile; productRef = 034F530E2C93B698005DD00B /* Sauce */; };
 		03638E2E2C9466EF00128C61 /* AutoClicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03638E2D2C9466EF00128C61 /* AutoClicker.swift */; };
+		FA1B2C3E2C9466EF00128C61 /* HumanFatigueEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1B2C3D2C9466EF00128C61 /* HumanFatigueEngine.swift */; };
 		03638E302C9480F200128C61 /* AllowLimitTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03638E2F2C9480F200128C61 /* AllowLimitTransformer.swift */; };
 		03638E332C95DC4C00128C61 /* ClickerMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03638E322C95DC4C00128C61 /* ClickerMode.swift */; };
 		851EB554273EE5820016F8CF /* KeyPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851EB553273EE5820016F8CF /* KeyPopoverViewController.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		03638E2D2C9466EF00128C61 /* AutoClicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoClicker.swift; sourceTree = "<group>"; };
+		FA1B2C3D2C9466EF00128C61 /* HumanFatigueEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanFatigueEngine.swift; sourceTree = "<group>"; };
 		03638E2F2C9480F200128C61 /* AllowLimitTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowLimitTransformer.swift; sourceTree = "<group>"; };
 		03638E322C95DC4C00128C61 /* ClickerMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickerMode.swift; sourceTree = "<group>"; };
 		851EB553273EE5820016F8CF /* KeyPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPopoverViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				03638E2D2C9466EF00128C61 /* AutoClicker.swift */,
+				FA1B2C3D2C9466EF00128C61 /* HumanFatigueEngine.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				851EB556273F05080016F8CF /* KeyCodeToCharTransformer.swift in Sources */,
 				03638E332C95DC4C00128C61 /* ClickerMode.swift in Sources */,
 				03638E2E2C9466EF00128C61 /* AutoClicker.swift in Sources */,
+				FA1B2C3E2C9466EF00128C61 /* HumanFatigueEngine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +389,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = S5XDVPQ9J6;
+				DEVELOPMENT_TEAM = C4G754RW48;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MaClicker/Info.plist;
@@ -419,7 +423,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = S5XDVPQ9J6;
+				DEVELOPMENT_TEAM = C4G754RW48;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MaClicker/Info.plist;

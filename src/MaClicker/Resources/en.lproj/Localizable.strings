@@ -12,3 +12,10 @@
 "accessibility_alert_informative_text" = "MaClicker needs permissions for accessibility to work.";
 "accessibility_alert_ok" = "Ok";
 "accessibility_alert_open_settings" = "Open settings";
+
+// Humanise section
+"humanise_label" = "Humanise:";
+"humanise_enable" = "Enable";
+"humanise_fatigue_arc" = "Fatigue arc";
+"humanise_noise_drift" = "Noise drift";
+"humanise_collapses" = "Collapses";
