@@ -123,10 +123,14 @@ extension MainViewController: NSTextFieldDelegate {
 
 extension MainViewController: KeyPopoverViewControllerDelegate {
     /// Activation key in Popover was selected
-    func keySelected(keyCode: uint16) {
+    func keySelected(keyCode: uint16, modifiers: NSEvent.ModifierFlags) {
         if keyCode != Sauce.shared.keyCode(for: .escape) {      // Don't save Escape key
             let key = Sauce.shared.key(for: Int(keyCode))
-            UserDefaults.standard.set(key?.QWERTYKeyCode ?? keyCode, forKey: "ActivationKey")
+            let relevantModifiers = modifiers.intersection([.command, .option, .shift, .control])
+            UserDefaults.standard.set(Int(relevantModifiers.rawValue), forKey: "ActivationModifiers")
+            // Remove first so IB binding re-evaluates the transformer even when the key code is unchanged
+            UserDefaults.standard.removeObject(forKey: "ActivationKey")
+            UserDefaults.standard.set(Int(key?.QWERTYKeyCode ?? keyCode), forKey: "ActivationKey")
         }
         
         keyPopover.performClose(self)

@@ -12,6 +12,9 @@ import Sauce
 
 final class AutoClicker {
     private var activationKey: Key?        { Key(QWERTYKeyCode: UserDefaults.standard.integer(forKey: "ActivationKey")) }
+    private var activationModifiers: NSEvent.ModifierFlags { 
+        NSEvent.ModifierFlags(rawValue: UInt(UserDefaults.standard.integer(forKey: "ActivationModifiers")))
+    }
     private var mode: ClickerMode          { ClickerMode(rawValue: UserDefaults.standard.integer(forKey: "ModeIndex")) ?? .toggle }
     private var useClickLimit: Bool        { UserDefaults.standard.bool(forKey: "LimitEnabled") }
     private var clickLimit: Int            { UserDefaults.standard.integer(forKey: "ClickLimit") }
@@ -34,16 +37,23 @@ final class AutoClicker {
     /// Listen for key pressed/released events
     private func setupListeners() {
         NSEvent.addGlobalMonitorForEvents(matching: [.keyDown]) { (event) in
-            if Sauce.shared.key(for: Int(event.keyCode)) == self.activationKey {
+            if self.matchesActivationKey(event: event) {
                 self.keyDown()
             }
         }
         
         NSEvent.addGlobalMonitorForEvents(matching: [.keyUp]) { event in
-            if Sauce.shared.key(for: Int(event.keyCode)) == self.activationKey {
+            if self.matchesActivationKey(event: event) {
                 self.keyUp()
             }
         }
+    }
+    
+    /// Checks if the event matches the configured activation key and modifiers
+    private func matchesActivationKey(event: NSEvent) -> Bool {
+        guard Sauce.shared.key(for: Int(event.keyCode)) == activationKey else { return false }
+        let relevantModifiers: NSEvent.ModifierFlags = [.command, .option, .shift, .control]
+        return event.modifierFlags.intersection(relevantModifiers) == activationModifiers.intersection(relevantModifiers)
     }
     
     /// Handles key down event based on selected mode
@@ -123,7 +133,7 @@ final class AutoClicker {
             self.releaseAllButtons()
             
             self.postMouseEvent(type: self.mouseButton == .right ? .rightMouseDown : .leftMouseDown)
-            self.postMouseEvent(type: self.mouseButton == .left ? .leftMouseUp : .leftMouseUp)
+            self.postMouseEvent(type: self.mouseButton == .right ? .rightMouseUp : .leftMouseUp)
             self.clickCount += 1
         }
     }

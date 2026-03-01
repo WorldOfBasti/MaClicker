@@ -10,7 +10,7 @@ import Foundation
 import AppKit
 
 protocol KeyPopoverViewControllerDelegate {
-    func keySelected(keyCode: uint16)
+    func keySelected(keyCode: uint16, modifiers: NSEvent.ModifierFlags)
 }
 
 class KeyPopoverViewController: NSViewController {
@@ -25,8 +25,8 @@ class KeyPopoverViewController: NSViewController {
     }
     
     lazy var handler: (NSEvent) -> NSEvent? = { (event) in
-        // Notify delegate that key was pressed
-        self.delegate?.keySelected(keyCode: event.keyCode)
+        let relevantModifiers = event.modifierFlags.intersection([.command, .option, .shift, .control])
+        self.delegate?.keySelected(keyCode: event.keyCode, modifiers: relevantModifiers)
         return nil
     }
     
