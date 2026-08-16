@@ -12,3 +12,23 @@
 "accessibility_alert_informative_text" = "MaClicker needs permissions for accessibility to work.";
 "accessibility_alert_ok" = "Ok";
 "accessibility_alert_open_settings" = "Open settings";
+
+// Main interface
+"ui_mode" = "Mode:";
+"ui_mode_toggle" = "Toggle";
+"ui_mode_hold" = "Hold";
+"ui_mode_lock" = "Lock";
+"ui_activation_key" = "Activation key:";
+"ui_select" = "Select";
+"ui_mouse_button" = "Mouse button:";
+"ui_left_mouse_button" = "Left mouse button";
+"ui_right_mouse_button" = "Right mouse button";
+"interval_label" = "Interval:";
+"interval_unit_ms" = "ms";
+"interval_unit_s" = "s";
+"interval_unit_min" = "min";
+"interval_unit_h" = "h";
+"ui_click_limit" = "Click limit:";
+"ui_enable" = "Enable";
+"ui_quit" = "Quit";
+"ui_press_key" = "Press key.\nPress ESC to cancel.";

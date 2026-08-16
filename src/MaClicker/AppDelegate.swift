@@ -15,9 +15,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var autoClicker: AutoClicker?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        let defaults = UserDefaults.standard
+
+        // Migrate the old CPS setting once. 10 CPS, for example, becomes 100 ms.
+        if defaults.object(forKey: "ClickIntervalValue") == nil {
+            let oldCPS = max((defaults.object(forKey: "ClicksPerSecond") as? Int) ?? 10, 1)
+            let intervalMilliseconds = max(Int((1_000.0 / Double(oldCPS)).rounded()), 1)
+            defaults.set(intervalMilliseconds, forKey: "ClickIntervalValue")
+            defaults.set(ClickIntervalUnit.milliseconds.rawValue, forKey: "ClickIntervalUnit")
+        }
+
         // Set default UserDefaults
-        UserDefaults.standard.register(defaults: [
+        defaults.register(defaults: [
             "ClicksPerSecond": 10,
+            "ClickIntervalValue": 100,
+            "ClickIntervalUnit": ClickIntervalUnit.milliseconds.rawValue,
             "LimitEnabled" : false,
             "ClickLimit": 100
         ])

@@ -10,20 +10,49 @@ import Foundation
 import AppKit
 import Sauce
 
+enum ClickIntervalUnit: Int {
+    case milliseconds = 0
+    case seconds = 1
+    case minutes = 2
+    case hours = 3
+
+    var localizationKey: String {
+        switch self {
+        case .milliseconds: return "interval_unit_ms"
+        case .seconds: return "interval_unit_s"
+        case .minutes: return "interval_unit_min"
+        case .hours: return "interval_unit_h"
+        }
+    }
+
+    func seconds(for value: Double) -> TimeInterval {
+        switch self {
+        case .milliseconds: return value / 1_000.0
+        case .seconds: return value
+        case .minutes: return value * 60.0
+        case .hours: return value * 3_600.0
+        }
+    }
+}
+
 final class AutoClicker {
     private var activationKey: Key?        { Key(QWERTYKeyCode: UserDefaults.standard.integer(forKey: "ActivationKey")) }
     private var mode: ClickerMode          { ClickerMode(rawValue: UserDefaults.standard.integer(forKey: "ModeIndex")) ?? .toggle }
     private var useClickLimit: Bool        { UserDefaults.standard.bool(forKey: "LimitEnabled") }
     private var clickLimit: Int            { UserDefaults.standard.integer(forKey: "ClickLimit") }
     private var mouseButton: CGMouseButton { UserDefaults.standard.integer(forKey: "MouseButtonIndex") == 1 ? .right : .left }
-    private var cps: Int                   { UserDefaults.standard.integer(forKey: "ClicksPerSecond") }
+    private var intervalValue: Double      { max(UserDefaults.standard.double(forKey: "ClickIntervalValue"), 1.0) }
+    private var intervalUnit: ClickIntervalUnit {
+        ClickIntervalUnit(rawValue: UserDefaults.standard.integer(forKey: "ClickIntervalUnit")) ?? .milliseconds
+    }
     
     private var clickerTimer: Timer?
     private var clickCount = 0
+    private var isClicking = false
     private var isLocked = false
     
     var isActive: Bool {
-        clickerTimer != nil || isLocked
+        isClicking || isLocked
     }
     
     init() {
@@ -66,14 +95,32 @@ final class AutoClicker {
     
     /// Starts clicker
     private func startClicker() {
-        if clickerTimer == nil {
-            clickerTimer = Timer.scheduledTimer(timeInterval: 1.0 / Double(cps), target: self, selector: #selector(clickerTimerFired), userInfo: nil, repeats: true)
-            notifyStatusChanged()
+        guard !isClicking else {
+            return
         }
+
+        isClicking = true
+        scheduleNextClick()
+        notifyStatusChanged()
+    }
+
+    /// Schedules one click using the currently selected interval.
+    private func scheduleNextClick() {
+        guard isClicking else {
+            return
+        }
+
+        let nextInterval = max(0.001, intervalUnit.seconds(for: intervalValue))
+        clickerTimer = Timer.scheduledTimer(timeInterval: nextInterval,
+                                            target: self,
+                                            selector: #selector(clickerTimerFired),
+                                            userInfo: nil,
+                                            repeats: false)
     }
     
     /// Stops clicker and resets limit click counter
     private func stopClicker() {
+        isClicking = false
         clickerTimer?.invalidate()
         clickerTimer = nil
         clickCount = 0
@@ -82,10 +129,10 @@ final class AutoClicker {
     
     /// Toggles clicker (when in toggle mode)
     private func toggleClicker() {
-        if clickerTimer == nil {
-            startClicker()
-        } else {
+        if isClicking {
             stopClicker()
+        } else {
+            startClicker()
         }
     }
     
@@ -111,21 +158,27 @@ final class AutoClicker {
         postMouseEvent(type: .rightMouseUp)
     }
     
-    /// Clicker timer callback (used for toggle and hold option, to perform clicks at the set cps/interval)
+    /// Clicker timer callback (used for toggle and hold option, to perform clicks at the set interval)
     @objc private func clickerTimerFired(timer: Timer) {
-        DispatchQueue.global(qos: DispatchQoS.background.qosClass).async {
-            if self.mode == .toggle && self.useClickLimit && self.clickCount + 1 > self.clickLimit {
-                self.stopClicker()
-                return
-            }
-            
-            // Release buttons to prevent bugs after switching modes
-            self.releaseAllButtons()
-            
-            self.postMouseEvent(type: self.mouseButton == .right ? .rightMouseDown : .leftMouseDown)
-            self.postMouseEvent(type: self.mouseButton == .left ? .leftMouseUp : .leftMouseUp)
-            self.clickCount += 1
+        clickerTimer = nil
+
+        guard isClicking else {
+            return
         }
+
+        if mode == .toggle && useClickLimit && clickCount + 1 > clickLimit {
+            stopClicker()
+            return
+        }
+
+        // Release buttons to prevent bugs after switching modes
+        releaseAllButtons()
+
+        postMouseEvent(type: mouseButton == .right ? .rightMouseDown : .leftMouseDown)
+        postMouseEvent(type: mouseButton == .left ? .leftMouseUp : .leftMouseUp)
+        clickCount += 1
+
+        scheduleNextClick()
     }
     
     /// Sends mouse event based on type and selected mouse button
@@ -149,4 +202,3 @@ final class AutoClicker {
 extension Notification.Name {
     static let clickerStatusChanged = Notification.Name("clickerStatusChanged")
 }
-

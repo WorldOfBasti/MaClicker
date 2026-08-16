@@ -15,6 +15,8 @@ class MainViewController: NSViewController {
     @IBOutlet weak var limitTextField: NSTextField!
     @IBOutlet weak var cpsStepper: NSStepper!
     @IBOutlet weak var limitStepper: NSStepper!
+
+    private var intervalUnitPopup: NSPopUpButton!
     
     var keyPopover: NSPopover!
     var updaterController: SPUStandardUpdaterController!
@@ -34,12 +36,16 @@ class MainViewController: NSViewController {
         let forceIntegerFormatter = ForceIntegerFormatter()
         cpsTextField.formatter = forceIntegerFormatter
         limitTextField.formatter = forceIntegerFormatter
+
+        // The storyboard still contains the old CPS bindings. Keep its layout and
+        // enabled-state binding, but manage interval value/unit ourselves.
+        setupIntervalControls()
         
-        // Set up steppers
-        cpsStepper.increment = 5
-        cpsStepper.maxValue = 100
+        // Set up click limit stepper
         limitStepper.increment = 10
         limitStepper.maxValue = Double.infinity
+
+        localizeInterface()
         
         // Check for accessibility permission
         if !AXIsProcessTrusted() {
@@ -52,6 +58,138 @@ class MainViewController: NSViewController {
         
         // Check for updates
         updaterController = SPUStandardUpdaterController(startingUpdater: true, updaterDelegate: nil, userDriverDelegate: nil)
+    }
+
+    private func setupIntervalControls() {
+        cpsTextField.unbind(.value)
+        cpsStepper.unbind(.value)
+
+        let defaults = UserDefaults.standard
+        let intervalValue = max(defaults.integer(forKey: "ClickIntervalValue"), 1)
+        let unit = ClickIntervalUnit(rawValue: defaults.integer(forKey: "ClickIntervalUnit")) ?? .milliseconds
+
+        cpsTextField.integerValue = intervalValue
+        cpsStepper.integerValue = intervalValue
+        cpsStepper.minValue = 1
+        cpsStepper.maxValue = Double.infinity
+        cpsStepper.increment = 1
+        cpsStepper.target = self
+        cpsStepper.action = #selector(intervalStepperChanged(_:))
+
+        intervalUnitPopup = NSPopUpButton(frame: .zero, pullsDown: false)
+        intervalUnitPopup.translatesAutoresizingMaskIntoConstraints = false
+        intervalUnitPopup.addItems(withTitles: [
+            localized("interval_unit_ms"),
+            localized("interval_unit_s"),
+            localized("interval_unit_min"),
+            localized("interval_unit_h")
+        ])
+        intervalUnitPopup.selectItem(at: unit.rawValue)
+        intervalUnitPopup.target = self
+        intervalUnitPopup.action = #selector(intervalUnitChanged(_:))
+        view.addSubview(intervalUnitPopup)
+
+        if let oldSpacingConstraint = view.constraints.first(where: {
+            ($0.firstItem as? NSStepper) === cpsStepper &&
+            ($0.secondItem as? NSTextField) === cpsTextField &&
+            $0.firstAttribute == .leading &&
+            $0.secondAttribute == .trailing
+        }) {
+            oldSpacingConstraint.isActive = false
+        }
+
+        NSLayoutConstraint.activate([
+            cpsTextField.widthAnchor.constraint(equalToConstant: 60),
+            intervalUnitPopup.leadingAnchor.constraint(equalTo: cpsTextField.trailingAnchor, constant: 5),
+            intervalUnitPopup.trailingAnchor.constraint(equalTo: cpsStepper.leadingAnchor, constant: -5),
+            intervalUnitPopup.centerYAnchor.constraint(equalTo: cpsTextField.centerYAnchor)
+        ])
+    }
+
+    @objc private func intervalStepperChanged(_ sender: NSStepper) {
+        let value = max(sender.integerValue, 1)
+        sender.integerValue = value
+        cpsTextField.integerValue = value
+        UserDefaults.standard.set(value, forKey: "ClickIntervalValue")
+    }
+
+    @objc private func intervalUnitChanged(_ sender: NSPopUpButton) {
+        UserDefaults.standard.set(sender.indexOfSelectedItem, forKey: "ClickIntervalUnit")
+    }
+
+    private func localized(_ key: String) -> String {
+        NSLocalizedString(key, comment: "")
+    }
+
+    private func localizeInterface() {
+        localize(view: view)
+
+        if let popoverView = keyPopover.contentViewController?.view {
+            localize(view: popoverView)
+        }
+    }
+
+    private func localize(view rootView: NSView) {
+        let titleKeys: [String: String] = [
+            "Mode:": "ui_mode",
+            "Modus:": "ui_mode",
+            "Activation key:": "ui_activation_key",
+            "Aktivierungstaste:": "ui_activation_key",
+            "Mouse button:": "ui_mouse_button",
+            "Maustaste:": "ui_mouse_button",
+            "Clicks per second:": "interval_label",
+            "Klicks pro Sekunde:": "interval_label",
+            "Click limit:": "ui_click_limit",
+            "Klick Limit:": "ui_click_limit",
+            "Select": "ui_select",
+            "Auswählen": "ui_select",
+            "Enable": "ui_enable",
+            "Aktiviert": "ui_enable",
+            "Quit": "ui_quit",
+            "Beenden": "ui_quit",
+            "Left mouse button": "ui_left_mouse_button",
+            "Linke Maustaste": "ui_left_mouse_button",
+            "Right mouse button": "ui_right_mouse_button",
+            "Rechte Maustaste": "ui_right_mouse_button",
+            "Press key.\nPress ESC to cancel.": "ui_press_key",
+            "Taste drücken.\nESC um abzubrechen.": "ui_press_key"
+        ]
+
+        let segmentKeys: [String: String] = [
+            "Toggle": "ui_mode_toggle",
+            "Umschalten": "ui_mode_toggle",
+            "Hold": "ui_mode_hold",
+            "Halten": "ui_mode_hold",
+            "Lock": "ui_mode_lock",
+            "Einrasten": "ui_mode_lock"
+        ]
+
+        for subview in rootView.subviews {
+            if let popup = subview as? NSPopUpButton {
+                for item in popup.itemArray {
+                    if let key = titleKeys[item.title] {
+                        item.title = localized(key)
+                    }
+                }
+            } else if let segmentedControl = subview as? NSSegmentedControl {
+                for index in 0..<segmentedControl.segmentCount {
+                    if let title = segmentedControl.label(forSegment: index),
+                       let key = segmentKeys[title] {
+                        segmentedControl.setLabel(localized(key), forSegment: index)
+                    }
+                }
+            } else if let button = subview as? NSButton {
+                if let key = titleKeys[button.title] {
+                    button.title = localized(key)
+                }
+            } else if let textField = subview as? NSTextField {
+                if let key = titleKeys[textField.stringValue] {
+                    textField.stringValue = localized(key)
+                }
+            }
+
+            localize(view: subview)
+        }
     }
     
     
@@ -98,16 +236,14 @@ extension MainViewController: NSTextFieldDelegate {
         }
         
         switch (textField.identifier) {
-            // CPS
+            // Click interval
         case cpsTextField.identifier:
-            // Only allow 100 cps
-            var value = Int(textField.stringValue) ?? 0
-            if value > 100 {
-                textField.stringValue = "100"
-                value = 100
+            guard let value = Int(textField.stringValue), value > 0 else {
+                return
             }
-            
-            UserDefaults.standard.set(value, forKey: "ClicksPerSecond")
+
+            cpsStepper.integerValue = value
+            UserDefaults.standard.set(value, forKey: "ClickIntervalValue")
             
             // Click limit
         case limitTextField.identifier:
@@ -116,6 +252,19 @@ extension MainViewController: NSTextFieldDelegate {
             
         default:
             break
+        }
+    }
+
+    func controlTextDidEndEditing(_ obj: Notification) {
+        guard let textField = obj.object as? NSTextField,
+              textField.identifier == cpsTextField.identifier else {
+            return
+        }
+
+        if Int(textField.stringValue) == nil || textField.integerValue < 1 {
+            let value = max(UserDefaults.standard.integer(forKey: "ClickIntervalValue"), 1)
+            textField.integerValue = value
+            cpsStepper.integerValue = value
         }
     }
 }
