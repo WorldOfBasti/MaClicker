@@ -98,6 +98,11 @@ class MainViewController: NSViewController {
         intervalJitterCheckbox.toolTip = localized("interval_jitter_tooltip")
         view.addSubview(intervalJitterCheckbox)
 
+        // The original storyboard has only one row for the click interval.
+        // Insert a dedicated row for timing variance and keep the footer in place.
+        let extraRowHeight: CGFloat = 26
+        expandLayoutForJitterRow(by: extraRowHeight)
+
         if let oldSpacingConstraint = view.constraints.first(where: {
             ($0.firstItem as? NSStepper) === cpsStepper &&
             ($0.secondItem as? NSTextField) === cpsTextField &&
@@ -107,22 +112,50 @@ class MainViewController: NSViewController {
             oldSpacingConstraint.isActive = false
         }
 
+        // Do not position the interval field relative to the localized label width.
+        // All controls use a fixed column so longer translations cannot overlap them.
         if let fieldLeadingConstraint = view.constraints.first(where: {
             ($0.firstItem as? NSTextField) === cpsTextField &&
-            $0.firstAttribute == .leading &&
-            $0.secondAttribute == .trailing
+            $0.firstAttribute == .leading
         }) {
-            fieldLeadingConstraint.constant = 100
+            fieldLeadingConstraint.isActive = false
         }
 
         NSLayoutConstraint.activate([
-            cpsTextField.widthAnchor.constraint(equalToConstant: 60),
-            intervalUnitPopup.leadingAnchor.constraint(equalTo: cpsTextField.trailingAnchor, constant: 5),
-            intervalUnitPopup.trailingAnchor.constraint(equalTo: cpsStepper.leadingAnchor, constant: -5),
+            cpsTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 165),
+            cpsTextField.widthAnchor.constraint(equalToConstant: 70),
+            intervalUnitPopup.leadingAnchor.constraint(equalTo: cpsTextField.trailingAnchor, constant: 6),
+            intervalUnitPopup.trailingAnchor.constraint(equalTo: cpsStepper.leadingAnchor, constant: -6),
             intervalUnitPopup.centerYAnchor.constraint(equalTo: cpsTextField.centerYAnchor),
-            intervalJitterCheckbox.trailingAnchor.constraint(equalTo: cpsTextField.leadingAnchor, constant: -8),
-            intervalJitterCheckbox.centerYAnchor.constraint(equalTo: cpsTextField.centerYAnchor)
+            intervalJitterCheckbox.leadingAnchor.constraint(equalTo: cpsTextField.leadingAnchor),
+            intervalJitterCheckbox.centerYAnchor.constraint(equalTo: cpsTextField.centerYAnchor,
+                                                             constant: -extraRowHeight)
         ])
+    }
+
+    private func expandLayoutForJitterRow(by height: CGFloat) {
+        let clickLimitLabel = view.subviews
+            .compactMap { $0 as? NSTextField }
+            .first { ["Click limit:", "Klick Limit:"].contains($0.stringValue) }
+        let clickLimitToggle = view.subviews
+            .compactMap { $0 as? NSButton }
+            .first { ["Enable", "Aktiviert"].contains($0.title) }
+
+        let viewsToMove = [limitTextField as NSView?, limitStepper as NSView?, clickLimitLabel, clickLimitToggle]
+            .compactMap { $0 }
+
+        for constraint in view.constraints where constraint.firstAttribute == .top {
+            guard let firstView = constraint.firstItem as? NSView,
+                  viewsToMove.contains(where: { $0 === firstView }) else {
+                continue
+            }
+            constraint.constant += height
+        }
+
+        var frame = view.frame
+        frame.size.height += height
+        view.frame = frame
+        preferredContentSize = frame.size
     }
 
     @objc private func intervalStepperChanged(_ sender: NSStepper) {
