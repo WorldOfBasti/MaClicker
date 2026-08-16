@@ -45,7 +45,9 @@ final class AutoClicker {
     private var intervalUnit: ClickIntervalUnit {
         ClickIntervalUnit(rawValue: UserDefaults.standard.integer(forKey: "ClickIntervalUnit")) ?? .milliseconds
     }
-    
+    private var useIntervalJitter: Bool    { UserDefaults.standard.bool(forKey: "IntervalJitterEnabled") }
+
+    private let intervalJitter = 0.05
     private var clickerTimer: Timer?
     private var clickCount = 0
     private var isClicking = false
@@ -110,7 +112,16 @@ final class AutoClicker {
             return
         }
 
-        let nextInterval = max(0.001, intervalUnit.seconds(for: intervalValue))
+        let baseInterval = intervalUnit.seconds(for: intervalValue)
+        let nextInterval: TimeInterval
+
+        if useIntervalJitter {
+            let randomFactor = Double.random(in: (1.0 - intervalJitter)...(1.0 + intervalJitter))
+            nextInterval = max(0.001, baseInterval * randomFactor)
+        } else {
+            nextInterval = max(0.001, baseInterval)
+        }
+
         clickerTimer = Timer.scheduledTimer(timeInterval: nextInterval,
                                             target: self,
                                             selector: #selector(clickerTimerFired),

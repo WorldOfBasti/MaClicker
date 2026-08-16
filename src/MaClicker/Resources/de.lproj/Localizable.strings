@@ -32,3 +32,6 @@
 "ui_enable" = "Aktiviert";
 "ui_quit" = "Beenden";
 "ui_press_key" = "Taste drücken.\nESC um abzubrechen.";
+
+"interval_jitter" = "Zufällig ±5 %";
+"interval_jitter_tooltip" = "Für jeden Klick ein zufälliges Intervall innerhalb von ±5 % des gewählten Zeitraums verwenden.";

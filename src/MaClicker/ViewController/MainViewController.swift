@@ -17,6 +17,7 @@ class MainViewController: NSViewController {
     @IBOutlet weak var limitStepper: NSStepper!
 
     private var intervalUnitPopup: NSPopUpButton!
+    private var intervalJitterCheckbox: NSButton!
     
     var keyPopover: NSPopover!
     var updaterController: SPUStandardUpdaterController!
@@ -89,6 +90,14 @@ class MainViewController: NSViewController {
         intervalUnitPopup.action = #selector(intervalUnitChanged(_:))
         view.addSubview(intervalUnitPopup)
 
+        intervalJitterCheckbox = NSButton(checkboxWithTitle: localized("interval_jitter"),
+                                          target: self,
+                                          action: #selector(intervalJitterChanged(_:)))
+        intervalJitterCheckbox.translatesAutoresizingMaskIntoConstraints = false
+        intervalJitterCheckbox.state = defaults.bool(forKey: "IntervalJitterEnabled") ? .on : .off
+        intervalJitterCheckbox.toolTip = localized("interval_jitter_tooltip")
+        view.addSubview(intervalJitterCheckbox)
+
         if let oldSpacingConstraint = view.constraints.first(where: {
             ($0.firstItem as? NSStepper) === cpsStepper &&
             ($0.secondItem as? NSTextField) === cpsTextField &&
@@ -98,11 +107,21 @@ class MainViewController: NSViewController {
             oldSpacingConstraint.isActive = false
         }
 
+        if let fieldLeadingConstraint = view.constraints.first(where: {
+            ($0.firstItem as? NSTextField) === cpsTextField &&
+            $0.firstAttribute == .leading &&
+            $0.secondAttribute == .trailing
+        }) {
+            fieldLeadingConstraint.constant = 100
+        }
+
         NSLayoutConstraint.activate([
             cpsTextField.widthAnchor.constraint(equalToConstant: 60),
             intervalUnitPopup.leadingAnchor.constraint(equalTo: cpsTextField.trailingAnchor, constant: 5),
             intervalUnitPopup.trailingAnchor.constraint(equalTo: cpsStepper.leadingAnchor, constant: -5),
-            intervalUnitPopup.centerYAnchor.constraint(equalTo: cpsTextField.centerYAnchor)
+            intervalUnitPopup.centerYAnchor.constraint(equalTo: cpsTextField.centerYAnchor),
+            intervalJitterCheckbox.trailingAnchor.constraint(equalTo: cpsTextField.leadingAnchor, constant: -8),
+            intervalJitterCheckbox.centerYAnchor.constraint(equalTo: cpsTextField.centerYAnchor)
         ])
     }
 
@@ -115,6 +134,10 @@ class MainViewController: NSViewController {
 
     @objc private func intervalUnitChanged(_ sender: NSPopUpButton) {
         UserDefaults.standard.set(sender.indexOfSelectedItem, forKey: "ClickIntervalUnit")
+    }
+
+    @objc private func intervalJitterChanged(_ sender: NSButton) {
+        UserDefaults.standard.set(sender.state == .on, forKey: "IntervalJitterEnabled")
     }
 
     private func localized(_ key: String) -> String {

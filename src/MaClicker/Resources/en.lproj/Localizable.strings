@@ -32,3 +32,6 @@
 "ui_enable" = "Enable";
 "ui_quit" = "Quit";
 "ui_press_key" = "Press key.\nPress ESC to cancel.";
+
+"interval_jitter" = "Random ±5%";
+"interval_jitter_tooltip" = "Use a random interval within ±5% of the selected period for every click.";

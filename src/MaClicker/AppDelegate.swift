@@ -30,6 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             "ClicksPerSecond": 10,
             "ClickIntervalValue": 100,
             "ClickIntervalUnit": ClickIntervalUnit.milliseconds.rawValue,
+            "IntervalJitterEnabled": false,
             "LimitEnabled" : false,
             "ClickLimit": 100
         ])
