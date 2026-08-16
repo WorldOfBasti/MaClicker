@@ -4,13 +4,25 @@ on:
   push:
     branches:
       - build/high-sierra
+  workflow_dispatch:
 
 jobs:
   build:
-    runs-on: macos-13
+    runs-on: macos-15
+    timeout-minutes: 20
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Select Xcode 16.4
+        run: sudo xcode-select -s /Applications/Xcode_16.4.app/Contents/Developer
+
+      - name: Show build environment
+        run: |
+          sw_vers
+          xcodebuild -version
+          swift --version
 
       - name: Build release app for macOS 10.13
         run: |
@@ -20,18 +32,27 @@ jobs:
             -configuration Release \
             -derivedDataPath build \
             MACOSX_DEPLOYMENT_TARGET=10.13 \
+            ARCHS=x86_64 \
+            ONLY_ACTIVE_ARCH=NO \
             CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
             build
+
+      - name: Verify deployment target
+        run: |
+          otool -l build/Build/Products/Release/MaClicker.app/Contents/MacOS/MaClicker | \
+            grep -A4 -E 'LC_BUILD_VERSION|LC_VERSION_MIN_MACOSX'
+          file build/Build/Products/Release/MaClicker.app/Contents/MacOS/MaClicker
 
       - name: Package app
         run: |
           ditto -c -k --sequesterRsrc --keepParent \
             build/Build/Products/Release/MaClicker.app \
-            MaClicker-macOS-10.13.zip
+            MaClicker-macOS-10.13-x86_64.zip
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: MaClicker-macOS-10.13
-          path: MaClicker-macOS-10.13.zip
+          name: MaClicker-macOS-10.13-x86_64
+          path: MaClicker-macOS-10.13-x86_64.zip
           if-no-files-found: error
