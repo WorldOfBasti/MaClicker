@@ -1,0 +1,37 @@
+name: High Sierra Build
+
+on:
+  push:
+    branches:
+      - build/high-sierra
+
+jobs:
+  build:
+    runs-on: macos-13
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build release app for macOS 10.13
+        run: |
+          xcodebuild \
+            -project src/MaClicker.xcodeproj \
+            -scheme MaClicker \
+            -configuration Release \
+            -derivedDataPath build \
+            MACOSX_DEPLOYMENT_TARGET=10.13 \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+      - name: Package app
+        run: |
+          ditto -c -k --sequesterRsrc --keepParent \
+            build/Build/Products/Release/MaClicker.app \
+            MaClicker-macOS-10.13.zip
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: MaClicker-macOS-10.13
+          path: MaClicker-macOS-10.13.zip
+          if-no-files-found: error
