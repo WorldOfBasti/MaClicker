@@ -1,0 +1,34 @@
+/*
+  Localizable.strings
+  MaClicker
+
+  Russian localization
+*/
+
+// Accessibility alert
+"accessibility_alert_message" = "Требуется разрешение на универсальный доступ";
+"accessibility_alert_informative_text" = "Для работы MaClicker требуется разрешение на универсальный доступ.";
+"accessibility_alert_ok" = "ОК";
+"accessibility_alert_open_settings" = "Открыть настройки";
+
+// Main interface
+"ui_mode" = "Режим:";
+"ui_mode_toggle" = "Вкл/выкл";
+"ui_mode_hold" = "Удержание";
+"ui_mode_lock" = "Зажать";
+"ui_activation_key" = "Клавиша активации:";
+"ui_select" = "Выбрать";
+"ui_mouse_button" = "Кнопка мыши:";
+"ui_left_mouse_button" = "Левая кнопка";
+"ui_right_mouse_button" = "Правая кнопка";
+"interval_label" = "Интервал:";
+"interval_unit_ms" = "мс";
+"interval_unit_s" = "с";
+"interval_unit_min" = "мин";
+"interval_unit_h" = "ч";
+"interval_jitter" = "Случайно ±5%";
+"interval_jitter_tooltip" = "Для каждого клика использовать случайный интервал в пределах ±5% от выбранного периода.";
+"ui_click_limit" = "Лимит кликов:";
+"ui_enable" = "Включить";
+"ui_quit" = "Выход";
+"ui_press_key" = "Нажмите клавишу.\nESC — отмена.";

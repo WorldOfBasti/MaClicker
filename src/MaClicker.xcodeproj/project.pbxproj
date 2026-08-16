@@ -31,6 +31,7 @@
 		851EB555273F05080016F8CF /* KeyCodeToCharTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCodeToCharTransformer.swift; sourceTree = "<group>"; };
 		85404CB1284AC1AE002B38F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		85404CB3284AC1B2002B38F9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A10000012D00000000000001 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		855698AA2737F80E0006B556 /* MaClicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaClicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		855698AD2737F80E0006B556 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		855698AF2737F80E0006B556 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +189,7 @@
 			knownRegions = (
 				en,
 				de,
+				ru,
 			);
 			mainGroup = 855698A12737F80E0006B556;
 			packageReferences = (
@@ -241,6 +243,7 @@
 			children = (
 				85404CB1284AC1AE002B38F9 /* en */,
 				85404CB3284AC1B2002B38F9 /* de */,
+				A10000012D00000000000001 /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
